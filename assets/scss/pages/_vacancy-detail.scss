@@ -1,0 +1,308 @@
+.news-sc {
+    background-image: url("https://www.simbrella.com/site/templates/img/vacancies_header_bg.svg");
+    background-position: 0 50%;
+    background-color: #0C0D26;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding: 0 0 70px;
+    @include flexbox(flex-end);
+    &__cap {
+        color: white;
+        @include allContainer();
+        width: 100%;
+        &__word {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #fff;
+        }
+    }
+}
+
+.skills {
+    padding: 60px 0 90px;
+    background: #F6F8FE;
+    &__container {
+        @include allContainer();
+        &__wrapper {
+            padding: 0 0 30px;
+            margin: 0 0 60px;
+            border-bottom: 1px solid #E7E7E7;
+            &__cap {
+                width: 100%;
+                padding: 0 0 18px;
+                font-size: 32px;
+                line-height: 1.33;
+                font-weight: bold;
+                color: #222;
+            }
+            &__list {
+                list-style: none;
+                &__list-item {
+                    margin: 0 0 24px;
+                    padding: 0 0 0 21px;
+                    font-size: 18px;
+                    line-height: 1.56;
+                    color: #222;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 8px;
+                        height: 8px;
+                        background: #FF931E;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 4px);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.apply {
+    padding: 120px 0;
+    background: #2D3192;
+    @include forClientSectionComp {
+        padding: 40px 0;
+    }
+    @include forClientSectionTablet {
+        padding: 40px 0;
+    }
+    @include forClientSection {
+        padding: 40px 0;
+    }
+    &__container {
+        @include allContainer();
+        &__cap {
+            padding: 0 0 80px;
+            font-size: 36px;
+            line-height: 1.29;
+            color: #fff;
+            @include forClientSectionTablet {
+                padding: 0 0 20px;
+                font-size: 24px;
+            }
+            @include forClientSection {
+                padding: 0 0 20px;
+                font-size: 21px;
+            }
+        }
+        &__success {
+            display: none;
+            max-width: 440px;
+            padding: 32px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            &__title {
+                padding: 80px 0 0;
+                font-size: 32px;
+                line-height: 1.5;
+                letter-spacing: 0.01em;
+                color: #fff;
+                background: url("/assets/icons/success_green_icon.svg") no-repeat 0 0;
+            }
+        }
+        &__form {
+            &__inp {
+                align-items: flex-start;
+                padding: 0 0 80px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                @include flexbox(flex-start,
+                space-between);
+                align-content: stretch;
+                @include forClientSectionTablet {
+                    display: block;
+                    padding: 0 0 40px;
+                }
+                @include forClientSectionComp {
+                    display: block;
+                    padding: 0 0 40px;
+                }
+                @include forClientSection {
+                    display: block;
+                    padding: 0 0 40px;
+                }
+                &__left {
+                    width: calc(55% - 15px);
+                    @include flexbox(flex-start,
+                    space-between);
+                    align-content: stretch;
+                    @include forClientSectionComp {
+                        width: 100%;
+                        padding: 0 0 20px;
+                    }
+                    @include forClientSectionTablet {
+                        display: block;
+                        width: 100%;
+                        padding: 0 0 20px px;
+                    }
+                    @include forClientSection {
+                        display: block;
+                        width: 100%;
+                        padding: 0 0 20px;
+                    }
+                    &__item {
+                        width: calc(33.333% - 15px);
+                        @include forClientSectionTablet {
+                            width: 100%;
+                            padding: 0 0 20px;
+                        }
+                        @include forClientSection {
+                            width: 100%;
+                            padding: 0 0 20px;
+                            &:last-child {
+                                padding: 0;
+                            }
+                        }
+                        &__input {
+                            width: 100%;
+                            height: 64px;
+                            padding: 0 20px;
+                            border: 1px solid rgba(255, 255, 255, 0.5);
+                            background: none;
+                            font-size: 16px;
+                            font-weight: 300;
+                            color: rgb(255, 254, 254);
+                            border-radius: 12px;
+                            &::placeholder {
+                                color: rgb(198, 198, 198);
+                            }
+                        }
+                    }
+                }
+                &__right {
+                    @include flexbox(flex-start,
+                    space-between);
+                    align-content: stretch;
+                    width: calc(45% - 15px);
+                    @include forClientSectionComp {
+                        width: 100%;
+                    }
+                    @include forClientSectionTablet {
+                        width: 100%;
+                    }
+                    @include forClientSection {
+                        display: block;
+                        width: 100%;
+                    }
+                    &__file {
+                        width: calc(50% - 15px);
+                        @include forClientSection {
+                            width: 100%;
+                            margin: 0 0 20px;
+                        }
+                        &__upload {
+                            @include flexbox(center,
+                            center);
+                            align-content: stretch;
+                            width: 100%;
+                            height: 64px;
+                            text-align: center;
+                            border: 1px dashed rgba(255, 255, 255, 0.5);
+                            border-radius: 12px;
+                            cursor: pointer;
+                            &__input {
+                                display: none;
+                            }
+                            &__span {
+                                display: inline-block;
+                                padding: 0 10px 0 27px;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 1.5;
+                                color: #fff;
+                                white-space: nowrap;
+                                max-width: 70%;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                background: url("https://www.simbrella.com/site/templates/img/file_white_icon.svg") no-repeat;
+                            }
+                        }
+                    }
+                    &__button {
+                        &__link {
+                            display: inline-block;
+                            height: 64px;
+                            padding: 0 150px 0 24px;
+                            font-weight: 600;
+                            font-size: 15px;
+                            line-height: 50px;
+                            color: #fff;
+                            text-decoration: none;
+                            border: 3.5px solid white;
+                            border-radius: 12px;
+                            text-align: left;
+                            transition: 0.4s;
+                            width: 100%;
+                            position: relative;
+                            overflow: hidden;
+                            cursor: pointer;
+                            background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
+                            @include flexbox(center,
+                            center);
+                        }
+                        &__link:hover {
+                            border: 3.5px solid #FF931E;
+                            transition: 0.4s;
+                            background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 20px) 50%;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        &__advantages {
+            padding: 85px 0 0;
+            @include flexbox(flex-start,
+            space-between);
+            align-content: stretch;
+            @include forClientSectionTablet {
+                padding: 40px 0 0;
+            }
+            @include forClientSection {
+                padding: 40px 0 0;
+            }
+            &__item {
+                width: calc(33.333% - 30px);
+                @include forClientSectionTablet {
+                    width: calc(33.333% - 15px);
+                    padding: 0 0 20px;
+                    text-align: center;
+                }
+                @include forClientSection {
+                    width: calc(33.333% - 15px);
+                    padding: 0 0 20px;
+                    text-align: center;
+                }
+                &__img {
+                    height: 96px;
+                }
+                &__cap {
+                    padding: 0 0 16px;
+                    font-weight: bold;
+                    font-size: 25px;
+                    line-height: 1.6;
+                    color: #fff;
+                    @include forClientSectionTablet {
+                        padding: 0 0 8px;
+                        font-size: 16px;
+                    }
+                    @include forClientSection {
+                        padding: 0 0 8px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.border {
+    border-color: red;
+}

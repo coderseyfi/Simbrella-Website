@@ -1,0 +1,1090 @@
+// first-company section start
+.first-company {
+    width: 100%;
+    overflow: hidden;
+    background-position: 60% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://www.simbrella.com/site/assets/files/1040/cover.jpg");
+    @include forPhone {
+        width: 100%;
+        background-position: 60% 50%;
+    }
+    &__cover {
+        height: 100vh;
+        // max-width: 1600px;
+        background: rgba(0, 0, 0, 0.2);
+        &__info {
+            max-width: 1140px;
+            top: 32%;
+            padding: 0 20px;
+            color: white;
+            position: relative;
+            margin: 0 auto;
+            &__max {
+                max-width: 620px;
+            }
+            &__caption {
+                font-size: 48px;
+                line-height: 1.30;
+                padding-bottom: 16px;
+                transition: 2s;
+                @include forPhone {
+                    font-size: 32px;
+                }
+            }
+            &__paragraph {
+                line-height: 1.9;
+                font-size: 15px
+            }
+        }
+    }
+    &__mouse {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 5%;
+        #mouse-a {
+            text-decoration: none;
+        }
+        &__scroll {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            &__svg {
+                margin-bottom: 10px;
+            }
+            &__text {
+                padding-left: 10px;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+//light section1 start
+.light-sc {
+    padding: 35px 0px 60px;
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+        &__upper {
+            padding: 0 0 40px;
+            @include flexbox(center,
+            space-between);
+            @include forBtn {
+                display: block;
+            }
+            &__head {
+                font-size: 36px;
+                color: #2D3192;
+                line-height: 1.3;
+            }
+            &__button {
+                &__link {
+                    display: inline-block;
+                    height: 56px;
+                    padding: 0 90px 0 24px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 50px;
+                    color: black;
+                    text-decoration: none;
+                    border: 3.5px solid rgb(237, 237, 237);
+                    border-radius: 15px;
+                    text-align: center;
+                    transition: 0.4s;
+                    background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
+                }
+                &__link:hover {
+                    border: 3.5px solid #FF931E;
+                    transition: 0.4s;
+                    background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
+                    background-repeat: no-repeat;
+                }
+            }
+            &__btn:hover {
+                border: 3.5px solid #FF931E;
+                width: calc(100% - 19px) 50%;
+                transition: 0.4s;
+            }
+        }
+        &__bottom {
+            @include flexbox(stretch,
+            space-between);
+            flex-wrap: wrap;
+            &__technology {
+                border: 3px solid rgb(237, 237, 237);
+                text-align: center;
+                padding: 40px 20px;
+                position: relative;
+                width: 31.3%;
+                border-radius: 3px;
+                transition: 0.5s;
+                cursor: pointer;
+                @include forTblet {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                img {
+                    padding: 20px 0px;
+                }
+                h3 {
+                    font-size: 24px;
+                    padding-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 1.62;
+                    font-weight: 300;
+                    color: rgb(135, 135, 135);
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+            &__technology:hover {
+                transform: scale(1.05);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+//blue section start
+.products {
+    padding: 60px 0;
+    background-color: #2D3192;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url("https://www.simbrella.com/site/templates/img/products_bg.svg");
+    background-size: cover;
+    // height: 100vh;
+    @include forClientSectionTablet {
+        padding: 30px 0 20px;
+    }
+    @include forClientSection {
+        padding: 30px 0 20px;
+    }
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+        &__text {
+            padding: 0 0 60px;
+            font-weight: 600;
+            font-size: 56px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #fff;
+            @include forClientSectionTablet {
+                padding: 0 0 16px;
+                font-size: 27px;
+            }
+            @include forClientSection {
+                padding: 0 0 16px;
+                font-size: 27px;
+            }
+        }
+        &__rounds {
+            max-width: 618px;
+            height: 624px;
+            margin: 0 auto;
+            position: relative;
+            @include forClientSectionTablet {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: minmax(min-content, max-content);
+                grid-gap: 20px 20px;
+                width: 100%;
+                height: max-content;
+            }
+            @include forClientSection {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: minmax(min-content, max-content);
+                grid-gap: 10px 10px;
+                width: 100%;
+                height: 390px;
+            }
+            &__item {
+                transition: 0.3s;
+                &--1 {
+                    width: 210px;
+                    height: 150px;
+                    position: absolute;
+                    left: calc(50% - 105px);
+                    top: 0px;
+                }
+                &--2 {
+                    width: 202px;
+                    height: 202px;
+                    position: absolute;
+                    left: 386px;
+                    top: 31px;
+                }
+                &--3 {
+                    width: 150px;
+                    height: 210px;
+                    position: absolute;
+                    left: 468px;
+                    top: 208px;
+                }
+                &--4 {
+                    width: 202px;
+                    height: 202px;
+                    position: absolute;
+                    left: 386px;
+                    top: 390px;
+                }
+                &--5 {
+                    width: 210px;
+                    height: 150px;
+                    position: absolute;
+                    left: 204px;
+                    top: 474px;
+                }
+                &--6 {
+                    width: 202px;
+                    height: 202px;
+                    position: absolute;
+                    top: 390px;
+                    left: 28px;
+                }
+                &--7 {
+                    width: 150px;
+                    height: 210px;
+                    position: absolute;
+                    left: 0;
+                    top: 208px;
+                }
+                &--8 {
+                    width: 202px;
+                    height: 202px;
+                    position: absolute;
+                    left: 29px;
+                    top: 31px;
+                }
+                &__svg {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                }
+                @include forClientSectionTablet {
+                    height: auto;
+                    min-height: 90px;
+                    width: auto;
+                    position: static;
+                }
+                @include forClientSection {
+                    height: auto;
+                    min-height: 90px;
+                    width: auto;
+                    position: static;
+                }
+                &__link {
+                    &--1 {
+                        clip-path: url(#clip_1);
+                    }
+                    &--2 {
+                        clip-path: url(#clip_2);
+                        &__text {
+                            margin: 15px 15px 0 0;
+                            @include forClientSectionTablet {
+                                margin: 0 !important;
+                            }
+                            @include forClientSection {
+                                margin: 0 !important;
+                            }
+                        }
+                    }
+                    &--3 {
+                        clip-path: url(#clip_3);
+                    }
+                    &--4 {
+                        clip-path: url(#clip_4);
+                        &__text {
+                            margin: 0 15px 15px 0px;
+                            @include forClientSectionTablet {
+                                margin: 0 !important;
+                            }
+                            @include forClientSection {
+                                margin: 0 !important;
+                            }
+                        }
+                    }
+                    &--5 {
+                        clip-path: url(#clip_5);
+                    }
+                    &--6 {
+                        clip-path: url(#clip_6);
+                        &__text {
+                            margin: 0 0 15px 15px;
+                            @include forClientSectionTablet {
+                                margin: 0 !important;
+                            }
+                            @include forClientSection {
+                                margin: 0 !important;
+                            }
+                        }
+                    }
+                    &--7 {
+                        clip-path: url(#clip_7);
+                    }
+                    &--8 {
+                        clip-path: url(#clip_8);
+                        &__text {
+                            margin: 15px 0 0 15px;
+                            @include forClientSectionTablet {
+                                margin: 0 !important;
+                            }
+                            @include forClientSection {
+                                margin: 0 !important;
+                            }
+                        }
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-content: stretch;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 1;
+                    text-align: center;
+                    color: #fff;
+                    text-decoration: none;
+                    background-color: #3595EE;
+                    object-fit: cover;
+                    transform: scale(1.00);
+                    transition: 0.2s;
+                    opacity: 1;
+                    @include forClientSectionTablet {
+                        width: 100%;
+                        min-height: 90px;
+                        padding: 16px 0;
+                        clip-path: none !important;
+                    }
+                    @include forClientSection {
+                        width: 100%;
+                        min-height: 90px;
+                        padding: 16px 0;
+                        clip-path: none !important;
+                    }
+                }
+            }
+            &__text {
+                display: inline-block;
+                padding: 0 15px;
+                @include forClientSectionTablet {
+                    margin: 0 !important;
+                }
+                @include forClientSection {
+                    padding: 0 24px;
+                    margin: 0 !important;
+                }
+            }
+            &__wrapper {
+                &__text {
+                    width: 270px;
+                    height: auto;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    text-align: center;
+                    letter-spacing: -0.02em;
+                    color: #fff;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, calc(10px - 50%));
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0s;
+                }
+            }
+        }
+    }
+}
+
+//city section start
+.city-sc {
+    background-color: #F6F8FE;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("https://www.simbrella.com/site/assets/files/1049/solutions_bg-1.jpg");
+    &__container {
+        max-width: 1517px;
+        color: white;
+        @include flexbox(center,
+        space-between);
+        @include forCitySection {
+            display: block;
+        }
+        &__left {
+            width: 49.9%;
+            font-size: 34px;
+            @include forCitySection {
+                width: 100%;
+                height: 250px;
+            }
+            &__head {
+                padding-left: 20%;
+                padding-right: 18%;
+                @include forCitySection {
+                    font-size: 22px;
+                    padding-top: 15%;
+                    padding-left: 28%;
+                }
+            }
+        }
+        &__right {
+            width: 49.9%;
+            height: 100%;
+            padding: 80px 60px;
+            background: #242b8b9b;
+            @include forCitySection {
+                width: 100%;
+                padding: 20px 20px;
+            }
+            &__list {
+                list-style: none;
+                max-width: 520px;
+                margin: 0 auto;
+                @include forCitySection {
+                    text-align: center;
+                }
+                &__item {
+                    padding: 36px 0px;
+                    font-size: 20px;
+                    border-bottom: 1px solid rgba(107, 107, 107, 0.683);
+                    font-weight: 700;
+                    @include forCitySection {
+                        padding: 20px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// statistics section start
+.statistics {
+    min-height: calc(100vh - 80px);
+    padding: 60px 0 0px;
+    @include forClientSectionTablet {
+        padding: 0px 0px;
+    }
+    @include forClientSectionComp {
+        padding: 35px 0 40px;
+    }
+    @include forClientSectionComp2 {
+        padding: 35px 0 0;
+    }
+    &__container {
+        max-width: 1080px;
+        padding: 0 20px;
+        margin: 0 auto;
+        @include forClientSectionComp2 {
+            padding: 0px 20px 0;
+        }
+        @include forClientSectionComp {
+            padding: 0px 20px 40px;
+        }
+        @include forClientSectionTablet {
+            padding: 30px 0px;
+        }
+        &__head {
+            padding: 0 0 40px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.29;
+            color: #2D3192;
+            @include forClientSectionComp {
+                font-size: 32px;
+                padding: 0 0 10px;
+            }
+            @include forClientSectionTablet {
+                font-size: 27px;
+                padding: 0 0 10px;
+            }
+            @include forClientSection {
+                font-size: 27px;
+            }
+        }
+        &__three {
+            @include forClientSectionComp2 {
+                padding: 30px 0;
+            }
+            @include forClientSectionComp {
+                padding: 40px 0;
+            }
+            @include forClientSectionTablet {
+                padding: 0px 20px;
+                display: block
+            }
+            @include forClientSection {
+                padding: 0px 20px;
+                display: block;
+                text-align: -webkit-center;
+            }
+            @include flexbox(stretch,
+            space-between);
+            padding: 90px 0;
+            align-content: stretch;
+            &__wrapper {
+                width: calc(33.333% - 20px);
+                @include forClientSectionTablet {
+                    padding: 20px 0px;
+                }
+                @include forClientSection {
+                    text-align: center
+                }
+                &__nums {
+                    display: flex;
+                    &__text {
+                        padding: 0 0 8px;
+                        font-weight: bold;
+                        font-size: 48px;
+                        line-height: 1;
+                        color: #FF931E;
+                    }
+                    &__head {
+                        padding: 0 0 8px;
+                        font-weight: bold;
+                        font-size: 48px;
+                        line-height: 1;
+                        color: #FF931E;
+                        margin-right: 10px;
+                        @include forClientSectionTablet {
+                            font-size: 32px;
+                        }
+                        @include forClientSectionComp {
+                            font-size: 32px;
+                        }
+                        @include forClientSection {
+                            font-size: 27px;
+                        }
+                    }
+                    &__text {
+                        @include forClientSectionTablet {
+                            font-size: 32px;
+                        }
+                        @include forClientSectionComp {
+                            font-size: 32px;
+                        }
+                        @include forClientSection {
+                            font-size: 27px;
+                        }
+                    }
+                }
+                &__par {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.86;
+                    text-transform: uppercase;
+                    color: #222;
+                }
+            }
+        }
+    }
+}
+
+.map {
+    &__container {
+        max-width: 1280px;
+        padding: 0 20px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        // &__svg {
+        //     // width: 1168px;
+        //     // height: 770px;
+        // }
+        &__head {
+            width: 100%;
+            height: 0;
+            padding: 0px 20px 0px;
+            position: absolute;
+            left: 0px;
+            top: 80px;
+            &__geo {
+                height: 0;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 1.30;
+                color: #2D3192;
+            }
+        }
+        &__info {
+            @include flexbox(center,
+            flex-start);
+            // &__operation {
+            //     // &__circle {}
+            // }
+        }
+    }
+}
+
+//client section start
+.client {
+    min-height: calc(100vh - 80px);
+    padding: 35px 0 60px;
+    background: #F6F8FE;
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+        &__head {
+            padding: 0 0 30px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.30;
+            color: #2D3192;
+        }
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 30px 30px;
+            grid-auto-rows: minmax(min-content, max-content);
+            @include forClientSection {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px 10px;
+            }
+            @include forClientSectionTablet {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px 10px;
+            }
+            @include forClientSectionComp {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include forClientSectionComp2 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            &__figure {
+                @include forClientSection {
+                    height: 160px;
+                }
+                @include forClientSectionComp {
+                    height: 160px;
+                }
+                @include forClientSectionTablet {
+                    height: 160px;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 160px;
+                margin: 0;
+                border: 1px solid #D5DDE4;
+                background: #fff;
+                position: relative;
+                border-radius: 4px;
+                &__img {
+                    max-height: 90px;
+                    max-width: calc(100% - 60px);
+                }
+                &__links-client {
+                    font-size: 24px;
+                    font-weight: bold;
+                    display: flex;
+                    span {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//executive-team start 
+.team {
+    transition: 1s;
+    @include forTeam {
+        display: none;
+        transition: 1s;
+    }
+    min-height: calc(100vh - 80px);
+    padding: 35px 0 60px;
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+        &__head {
+            padding: 0 0 30px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.30;
+            color: #2D3192;
+        }
+        &__collective {
+            font-size: 0;
+            text-align: center;
+            width: calc(100% + 30px);
+            margin: 0 0 0 -15px;
+            &__officer {
+                width: calc(20% - 30px);
+                margin: 0 15px 48px;
+                display: inline-block;
+                vertical-align: top;
+                &__bg {
+                    background: url("https://www.simbrella.com/site/templates/img/figure_green_bg.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 270px;
+                    border-radius: 4px;
+                    display: flex;
+                    justify-content: center;
+                    &__img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &__bottom {
+                    padding: 16px 0px;
+                    &__head {
+                        padding: 0 0 4px;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 1.33;
+                        color: #222;
+                    }
+                    &__par {
+                        font-size: 15px;
+                        line-height: 1.6;
+                        color: #5F6773;
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.job {
+    background: #F6F8FE;
+    padding: 35px 0 60px 0;
+    @include forClientSectionComp2 {}
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+        &__upper {
+            &__head {
+                padding: 0 0 30px;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 1.30;
+                color: #2D3192;
+            }
+            &__three {
+                @include flexbox(center,
+                space-between);
+                padding: 0 0 30px;
+                align-content: stretch;
+                &__item {
+                    padding: 0 0 10px;
+                    width: calc(33.333% - 40px);
+                    @include forClientSectionTablet {
+                        width: calc(33.333% - 10px);
+                        padding: 0 0 30px;
+                        text-align: center;
+                    }
+                    @include forClientSection {
+                        width: calc(33.333% - 10px);
+                        padding: 0 0 30px;
+                        text-align: center;
+                    }
+                    &__icon {
+                        padding: 0 0 10px;
+                    }
+                    &__cap {
+                        padding: 0 0 0;
+                        font-weight: bold;
+                        font-size: 20px;
+                        line-height: 1.6;
+                        letter-spacing: 0.01em;
+                        color: #222;
+                        @include forClientSectionComp {
+                            font-size: 18px;
+                        }
+                        @include forClientSectionTablet {
+                            padding: 0 0 10px;
+                            font-size: 16px;
+                        }
+                        @include forClientSection {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        &__bottom {
+            @include flexbox(center,
+            space-between);
+            @include forClientSectionTablet {
+                display: block;
+            }
+            @include forClientSection {
+                display: block;
+            }
+            &__left {
+                @include forClientSectionTablet {
+                    width: 100%;
+                }
+                @include forClientSection {
+                    width: 100%;
+                }
+                width: 50%;
+                position: relative;
+                &__img {
+                    width: 100%;
+                    display: block;
+                    border-radius: 4px;
+                }
+            }
+            &__right {
+                width: 55%;
+                margin: 0 0 0 -15%;
+                padding: 40px 60px;
+                color: #fff;
+                border-radius: 4px;
+                position: relative;
+                background: #2D3192;
+                // @include flexbox(center);
+                @include forClientSectionComp {
+                    padding: 30px;
+                }
+                @include forClientSectionTablet {
+                    width: 100%;
+                    padding: 20px 20px 25px;
+                    margin: 0;
+                    border-radius: 0 0 4px 4px;
+                }
+                @include forClientSection {
+                    width: 100%;
+                    padding: 20px;
+                    margin: 0;
+                    border-radius: 0 0 4px 4px;
+                }
+                &__become {
+                    padding: 0 0 32px;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 1.4;
+                    @include forClientSectionTablet {
+                        padding: 0 0 20px;
+                        font-size: 27px;
+                    }
+                }
+                &__text {
+                    padding: 0 0 40px;
+                    font-size: 16px;
+                    line-height: 1.56;
+                    color: #fff;
+                    @include forClientSectionTablet {
+                        padding: 0 0 20px;
+                        font-size: 16px;
+                    }
+                }
+                &__btn {
+                    &__link {
+                        display: inline-block;
+                        height: 56px;
+                        padding: 0 90px 0 24px;
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 50px;
+                        color: #fff;
+                        text-decoration: none;
+                        border: 3.5px solid white;
+                        border-radius: 15px;
+                        text-align: center;
+                        transition: 0.4s;
+                        background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
+                    }
+                    &__link:hover {
+                        border: 3.5px solid #FF931E;
+                        transition: 0.4s;
+                        background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// news section start
+.news {
+    min-height: calc(100vh - 80px);
+    padding: 35px 0 80px;
+    @include forClientSection {
+        min-height: 1px;
+        padding: 30px 0 10px;
+    }
+    &__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+        &__upper {
+            @include flexbox(center,
+            space-between);
+            align-content: stretch;
+            padding: 0 0 40px;
+            &__head {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 1.3;
+                color: #2D3192;
+                @include forClientSection {
+                    font-size: 24px;
+                }
+            }
+            &__button {
+                &__link {
+                    display: inline-block;
+                    height: 56px;
+                    padding: 0 90px 0 24px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 50px;
+                    color: rgb(0, 0, 0);
+                    text-decoration: none;
+                    border: 3.5px solid rgb(210, 210, 210);
+                    border-radius: 15px;
+                    text-align: center;
+                    transition: 0.4s;
+                    background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
+                    @include forClientSection {
+                        padding: 0 70px 0 24px;
+                    }
+                }
+                &__link:hover {
+                    border: 3.5px solid #FF931E;
+                    transition: 0.4s;
+                    background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        &__bottom {
+            @include flexbox(stretch,
+            flex-start);
+            align-content: stretch;
+            @include forClientSectionTablet {
+                display: block;
+            }
+            @include forClientSection {
+                display: block;
+            }
+            #for-card {
+                margin: 0;
+            }
+            .for-zoom {
+                text-decoration: none;
+            }
+            &__card {
+                width: calc(33.333% - 20px);
+                position: relative;
+                margin: 0 0 0 30px;
+                @include forClientSectionTablet {
+                    width: 100%;
+                    padding: 0 0 30px;
+                    margin: 0%;
+                }
+                @include forClientSection {
+                    width: 100%;
+                    padding: 0 0 30px;
+                    margin: 0%;
+                }
+                &__img {
+                    margin: 0 0 24px;
+                    font-size: 0;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    position: relative;
+                    @include forClientSection {
+                        margin: 0 0 15px;
+                    }
+                    &__pic {
+                        display: block;
+                        width: 100%;
+                        transition: all 0.3s;
+                        transform: scale(1);
+                    }
+                }
+                &__text {
+                    padding: 0 0 48px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 1.75;
+                    color: #222;
+                    @include forClientSection {
+                        padding: 0 0 10px;
+                        font-size: 16px;
+                    }
+                }
+                &__date {
+                    font-size: 18px;
+                    line-height: 1.33;
+                    color: #5F6773;
+                    @include forClientSection {
+                        font-size: 14px;
+                    }
+                }
+                &__link {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+.zoom {
+    transition: all 0.3s;
+    transform: scale(1.05);
+}
+
+.white {
+    background-color: #F6F8FE;
+    color: #3595EE;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.show-p {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.1s;
+    transform: translate(-50%, -50%);
+}
+
+.opa-me {
+    opacity: 0.5;
+}
+
+.opaa {
+    display: none;
+}

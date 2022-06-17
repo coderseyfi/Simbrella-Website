@@ -1,0 +1,78 @@
+.news-sc {
+    &-for-investor {
+        background-image: url("https://www.simbrella.com/site/templates/img/vacancy_bg.jpg");
+    }
+    background-image: url("https://www.simbrella.com/site/templates/img/vacancies_header_bg.svg");
+    background-position: 0 50%;
+    background-color: #0C0D26;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding: 0 0 70px;
+    @include flexbox(flex-end);
+    &__cap {
+        color: white;
+        @include allContainer();
+        width: 100%;
+        &__word {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #fff;
+        }
+    }
+}
+
+.cards {
+    padding: 60px 0 20px;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
+        grid-gap: 50px 30px;
+        @include allContainer();
+        @include forClientSection {
+            grid-template-columns: 1fr;
+            grid-gap: 30px 20px;
+        }
+        @include forClientSectionTablet {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px 20px;
+        }
+        @include forClientSectionComp {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px 20px;
+        }
+        &__item {
+            position: relative;
+            &__box {
+                padding: 0 0 24px;
+                &__img {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+            &__text {
+                min-height: 100px;
+                padding: 0 0 20px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.64;
+                color: #222;
+            }
+            &__time {
+                font-size: 18px;
+                line-height: 1.33;
+                color: #5F6773;
+            }
+            &__link {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

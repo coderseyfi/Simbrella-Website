@@ -1,0 +1,251 @@
+.footer {
+    align-content: stretch;
+    background-image: url("https://www.simbrella.com/site/templates/img/footer_bg.svg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: cover 2px;
+    &__container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0px 25px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        min-height: calc(100vh - 80px);
+        &__upper {
+            padding-top: 35px;
+            @include flexbox(stretch,
+            space-between);
+            align-content: stretch;
+            @include forClientSectionTablet {
+                display: block;
+            }
+            @include forClientSection {
+                display: block;
+            }
+            &__head {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 1.29;
+                color: #fff;
+                @include forClientSectionTablet {
+                    padding: 0 0 20px;
+                    font-size: 27px;
+                }
+                @include forClientSection {
+                    padding: 0 0 20px;
+                    font-size: 22px;
+                }
+            }
+            &__right {
+                width: calc(100% - 355px);
+                @include forClientSectionComp {
+                    width: calc(100% - 220px);
+                }
+                @include forClientSectionTablet {
+                    width: 100%;
+                }
+                @include forClientSection {
+                    width: 100%
+                }
+                &__header {
+                    @include flexbox(center,
+                    space-between);
+                    align-content: center;
+                    padding: 0 0 50px;
+                    flex-wrap: wrap;
+                    &__nav {
+                        @include flexbox(center,
+                        space-between);
+                        align-content: center;
+                        @include forClientSectionComp {
+                            padding: 0 0 40px;
+                        }
+                        @include forClientSectionComp2 {
+                            padding: 0 0 30px;
+                        }
+                        @include forClientSectionTablet {
+                            padding: 0 0 20px;
+                        }
+                        @include forClientSection {
+                            padding: 0 0 20px;
+                        }
+                        &__list {
+                            list-style-type: none;
+                            flex-wrap: wrap;
+                            @include flexbox(center);
+                            align-content: center;
+                            &__list-item {
+                                display: inline-block;
+                                padding: 0 48px;
+                                border-left: 1px solid #505050;
+                                @include forClientSectionTablet {
+                                    padding: 0 20px;
+                                }
+                                @include forClientSection {
+                                    padding: 0 20px;
+                                }
+                                &__link {
+                                    font-weight: bold;
+                                    // font-size: 18px;
+                                    line-height: 1.33;
+                                    letter-spacing: 0.01em;
+                                    color: rgba(255, 255, 255, 0.5);
+                                    text-decoration: none;
+                                    transition: 0.3s;
+                                    @include forClientSectionTablet {
+                                        font-size: 21px;
+                                    }
+                                    @include forClientSection {
+                                        font-size: 15px;
+                                    }
+                                }
+                                &__link:hover {
+                                    color: #FF931E;
+                                    transition: 0.3s;
+                                }
+                            }
+                            &__list-item:first-child {
+                                border-left: none;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                    &__btn {
+                        &__link {
+                            display: flex;
+                            align-items: center;
+                            height: 56px;
+                            padding: 0 80px 0 24px;
+                            font-weight: 600;
+                            font-size: 15px;
+                            line-height: 56px;
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                            border: 3.5px solid rgb(210, 210, 210);
+                            border-radius: 15px;
+                            text-align: center;
+                            transition: 0.4s;
+                            background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
+                            @include forClientSection {
+                                padding: 0 70px 0 24px;
+                            }
+                        }
+                        &__link:hover {
+                            border: 3.5px solid #FF931E;
+                            transition: 0.4s;
+                            background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+                &__address {
+                    &__list {
+                        display: none;
+                        &__list-item {
+                            list-style-type: none;
+                            padding-bottom: 48px;
+                            &__cap {
+                                display: block;
+                                padding: 0 0 12px;
+                                font-size: 18px;
+                                line-height: 1.45;
+                                color: rgba(255, 255, 255, 0.6);
+                            }
+                            &__par {
+                                font-weight: 600;
+                                font-size: 20px;
+                                line-height: 1.54;
+                                color: #fff;
+                                // @include forClientSectionTablet {
+                                //     font-size: 15px;
+                                // }
+                                @include forClientSection {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__bottom {
+            padding: 40px 20px 25px;
+            @include flexbox(stretch,
+            space-between);
+            align-content: stretch;
+            @include forClientSectionTablet {
+                flex-direction: column
+            }
+            @include forClientSection {
+                flex-direction: column
+            }
+            &__left {
+                @include flexbox(stretch,
+                space-between);
+                align-content: stretch;
+                @include forClientSectionTablet {
+                    justify-content: center;
+                }
+                @include forClientSection {
+                    justify-content: center;
+                    align-items: center;
+                }
+                &__text {
+                    padding: 0 10px 0 0;
+                    font-size: 12px;
+                    line-height: 2.67;
+                    color: #fff;
+                }
+                &__link {
+                    display: inline-block;
+                    padding: 0 0 0 30px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 2.67;
+                    color: #fff;
+                    text-decoration: none;
+                    position: relative;
+                    &__icon {
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 10px);
+                    }
+                }
+            }
+            &__right {
+                width: calc(100% - 360px);
+                font-size: 16px;
+                line-height: 1.5;
+                @include forClientSection {
+                    font-size: 15px;
+                }
+                color: #999;
+                @include forClientSectionTablet {
+                    width: 100%;
+                }
+                @include forClientSection {
+                    width: 100%;
+                }
+                @include forClientSectionTablet {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    display: block;
+}
+
+.color {
+    color: #FF931E;
+}

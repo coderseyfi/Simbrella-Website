@@ -1,0 +1,249 @@
+.what-we-do {
+    width: 100%;
+    position: relative;
+    &__img {
+        height: 480px;
+        background-image: url("https://www.simbrella.com/site/templates/img/we_do_bg.jpg");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        align-content: stretch;
+        background-size: cover;
+        @include flexbox(flex-end);
+        align-content: stretch;
+        padding: 0 0 70px;
+        @include forClientSection {
+            height: auto !important;
+            padding: 120px 0 30px !important;
+        }
+        @include forClientSectionTablet {
+            height: 270px !important;
+            padding: 0 0 30px;
+        }
+        @include forClientSectionComp {
+            height: 320px px !important;
+            padding: 0 0 40px;
+        }
+        &__over {
+            @include overImg();
+            @include forCitySection {
+                display: block;
+            }
+        }
+        &__word {
+            @include allContainer();
+            position: relative;
+            width: 100%;
+            &__head {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 1.29;
+                color: #fff;
+                @include forCitySection {
+                    padding: 0 0 20px;
+                    font-size: 24px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 27px;
+                }
+                @include forClientSection {
+                    padding: 0 0 20px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+.scoring {
+    padding: 100px 0;
+    background: #F6F8FF;
+    @include forClientSectionComp {
+        padding: 40px 0;
+    }
+    &__container {
+        @include allContainer();
+        @include flexbox(center,
+        space-between);
+        align-content: stretch;
+        flex-wrap: wrap;
+        @include forClientSectionComp {
+            display: block;
+        }
+        @include forClientSectionTablet {
+            display: block;
+        }
+        @include forClientSection {
+            display: block;
+        }
+        &__left {
+            width: 38%;
+            padding: 40px 24px 60px;
+            border: 1px solid #fff;
+            background: #fff;
+            border-radius: 4px;
+            @include forClientSectionComp {
+                width: 100%;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+            }
+            @include forClientSection {
+                width: 100%;
+            }
+            &__box {
+                width: 100%;
+                position: relative;
+                height: 230px;
+                text-align: center;
+                &__img {
+                    text-align: center;
+                }
+            }
+            &__head {
+                padding: 0 0 16px;
+                font-size: 24px;
+                line-height: 1.25;
+                text-align: center;
+                color: #222;
+                font-weight: 200;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: 1.62;
+                text-align: center;
+                color: #5F6773;
+            }
+        }
+        &__right {
+            width: calc(100% - 600px);
+            @include forClientSectionComp {
+                width: 100%;
+                padding: 30px 0 0;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+                padding: 30px 0 0;
+            }
+            @include forClientSection {
+                width: 100%;
+                padding: 30px 0 0;
+            }
+            @include forClientSectionComp2 {
+                width: calc(100% - 480px);
+            }
+            &__side {
+                font-size: 20px;
+                line-height: 1.4;
+                color: #222;
+                &__list {
+                    list-style: none;
+                    &__item::before {
+                        content: "";
+                        display: block;
+                        width: 8px;
+                        height: 8px;
+                        background: #FF931E;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 4px);
+                        border-radius: 50%;
+                    }
+                    &__item {
+                        padding: 0 0 0 21px;
+                        margin: 0 0 32px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.guys {
+    background-image: url("https://www.simbrella.com/site/templates/img/single_image.jpg?v=2");
+    max-height: 480px;
+    min-height: 270px;
+    height: 30vw;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    &__over {
+        @include overImg();
+    }
+}
+
+.footer-part {
+    background: black;
+    min-height: 1px;
+    padding: 34px 0 34px;
+    @include forClientSection {
+        min-height: 1px;
+        padding: 20px 0 20px;
+    }
+    &__wrapper {
+        @include flexbox(stretch,
+        space-between);
+        align-content: stretch;
+        @include allContainer();
+        padding: 0 20px;
+        @include forClientSectionTablet {
+            display: block;
+            text-align: center;
+        }
+        @include forClientSection {
+            min-height: 1px;
+            padding: 20px 0 20px;
+            display: block;
+            text-align: center;
+        }
+        &__left {
+            @include flexbox(center,
+            flex-start);
+            align-content: stretch;
+            @include forClientSectionTablet {
+                justify-content: center;
+            }
+            @include forClientSection {
+                justify-content: center;
+            }
+            &__text {
+                padding: 0 10px 0 0;
+                font-size: 12px;
+                line-height: 2.67;
+                color: #fff;
+            }
+            &__link {
+                display: inline-block;
+                padding: 0px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 2.67;
+                color: #fff;
+                text-decoration: none;
+                position: relative;
+                display: flex;
+                &__icon {
+                    padding-right: 6px;
+                }
+            }
+        }
+        &__right {
+            width: calc(100% - 360px);
+            font-size: 16px;
+            line-height: 1.5;
+            color: #999;
+            @include forClientSectionTablet {
+                width: 100%;
+                padding: 10px 0 0;
+                font-size: 14px;
+            }
+            @include forClientSection {
+                width: 100%;
+                padding: 10px 0 0;
+                font-size: 14px;
+            }
+        }
+    }
+}

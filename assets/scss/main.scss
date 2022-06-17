@@ -1,0 +1,27 @@
+//variables
+@import "./abstracts/variables";
+@import "./aos/aos";
+//reset
+@import "./core/reset";
+//mixins
+@import "./abstracts/_mixins";
+//bootstrap
+//header
+@import "./components/header";
+@import "./components/footer";
+//home
+@import "./pages/home";
+//what-we-do
+@import "./pages/what-we-do";
+//all vacancies
+@import "./pages/all-vacancies";
+//vacany details
+@import "./pages/vacancy-detail";
+//news 
+@import "./pages/news";
+//news details
+@import "./pages/news-details";
+//our-branches
+@import "./pages/our-branches";
+//investors
+@import "./pages/investors";

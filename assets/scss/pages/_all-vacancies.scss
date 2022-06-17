@@ -1,0 +1,133 @@
+.vacancies {
+    padding: 120px 0 40px;
+    min-height: 1px;
+    &__container {
+        @include allContainer();
+        @include flexbox(center, space-between);
+        align-content: stretch;
+        &__left {
+            @include forClientSectionTablet {
+                width: 100%;
+            }
+            @include forClientSection {
+                width: 100%;
+            }
+            width: calc(45% - 40px);
+            &__cap {
+                padding: 0 0 32px;
+                font-size: 32px;
+                line-height: 1.29;
+                font-weight: bold;
+                color: #222;
+                @include forClientSection {
+                    font-size: 22px;
+                    padding: 0 0 15px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 27px;
+                    padding: 0 0 15px;
+                }
+            }
+            &__text {
+                font-size: 18px;
+                line-height: 1.56;
+                color: #5F6773;
+                &__paragraph {
+                    padding: 0 0 20px;
+                }
+            }
+        }
+        &__right {
+            @include forClientSectionTablet {
+                display: none;
+            }
+            @include forClientSection {
+                display: none;
+            }
+            &__img {
+                width: 460px;
+            }
+        }
+    }
+}
+
+.vacancy-details {
+    padding: 100px 0;
+    background: #F6F8FE;
+    @include forClientSectionComp {
+        padding: 40px 0;
+    }
+    @include forClientSectionTablet {
+        padding: 40px 0;
+    }
+    @include forClientSection {
+        padding: 20px 0;
+    }
+    &__container {
+        @include allContainer();
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        grid-gap: 30px 30px;
+        @include forClientSectionComp {
+            grid-gap: 20px 20px;
+        }
+        @include forClientSectionTablet {
+            grid-template-columns: 1fr;
+            grid-gap: 20px 20px;
+        }
+        @include forClientSection {
+            grid-template-columns: 1fr;
+            grid-gap: 20px 20px;
+        }
+        &__sector {
+            @include flexbox(center, center);
+            align-content: stretch;
+            padding: 40px 20px;
+            background: #fff;
+            border: 1px solid #FF931E;
+            border-radius: 4px;
+            position: relative;
+            transition: 0.3s;
+            @include forClientSectionComp {
+                padding: 30px 20px;
+            }
+            @include forClientSectionTablet {
+                padding: 30px 20px;
+            }
+            @include forClientSection {
+                grid-gap: 20px 20px;
+            }
+            &:hover {
+                background: #FF931E;
+                color: white;
+                transition: 0.3s;
+            }
+            &__title {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 1.4;
+                text-align: center;
+                padding: 0;
+                @include forClientSectionComp {
+                    font-size: 21px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 21px;
+                }
+                @include forClientSection {
+                    font-size: 18px;
+                }
+            }
+            &__link {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.branches {
+    padding: 100px 0;
+    background: #F6F8FE;
+    @include forClientSectionComp {
+        padding: 40px 0 40px;
+    }
+    @include forClientSectionTablet {
+        padding: 30px 0 40px;
+    }
+    @include forClientSection {
+        padding: 20px 10px 40px;
+    }
+    &__container {
+        @include allContainer();
+        &__seven {
+            .item-ams {
+                background-image: url("https://www.simbrella.com/site/assets/files/1118/netherlands_map.svg");
+            }
+            .item-baku {
+                background-image: url("https://www.simbrella.com/site/assets/files/1122/azerbaycan_map.svg");
+            }
+            .item-sing {
+                background-image: url("https://www.simbrella.com/site/assets/files/1127/singapore_map.svg");
+            }
+            .item-hung {
+                background-image: url("https://www.simbrella.com/site/assets/files/1135/hungary_map.svg");
+            }
+            .item-nig {
+                background-image: url("https://www.simbrella.com/site/assets/files/1139/nigeria_map.svg");
+            }
+            .item-leo {
+                background-image: url("https://www.simbrella.com/site/assets/files/1147/sierraleone_map.svg");
+            }
+            .item-uzb {
+                background-image: url("https://www.simbrella.com/site/assets/files/1151/uzbekistan_map.svg");
+            }
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px 30px;
+            @include forClientSectionComp {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px 20px;
+            }
+            @include forClientSectionTablet {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+            @include forClientSection {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+            &__card {
+                min-height: 410px;
+                padding: 40px 40px 40px;
+                border: 1px solid #E6E6E6;
+                background: #fff;
+                background-repeat: no-repeat;
+                background-position: calc(100% - 40px) calc(100% - 40px);
+                border-radius: 4px;
+                &__cap {
+                    padding: 0 0 32px;
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: 1.5;
+                    letter-spacing: 0.01em;
+                    color: #FF931E;
+                }
+                &__city {
+                    &__head {
+                        padding: 0 0 8px;
+                        font-size: 14px;
+                        line-height: 1.71;
+                        color: #99A3B2;
+                    }
+                    &__info {
+                        min-height: 72px;
+                        padding: 0 0 24px;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        color: #000;
+                        a {
+                            color: #000;
+                            text-decoration: none;
+                        }
+                    }
+                    &__info2 {
+                        font-weight: 600;
+                        padding: 0;
+                        min-height: 1px;
+                        a {
+                            color: #000;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

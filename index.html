@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/76c929e6a2.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./assets/css/style.min.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/imgs/sicon.png">
+    <title>Simbrella</title>
+
+</head>
+
+<body>
+    <!-- navbar start -->
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav__left">
+                <a class="header__nav__left__link" href="">
+                    <img id="white-img" class="header__nav__left__link__logo" src="./assets/icons/logo.svg" alt="logo1" />
+                    <img id="blue-img" class="header__nav__left__link__logo" src="./assets/icons/logo-blue.svg" alt="logo2">
+                </a>
+            </div>
+            <div class="header__nav__right">
+                <ul class="header__nav__right__list">
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="#what-we-do">What we do</a>
+                    </li>
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="#our-products">Our products</a>
+                    </li>
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="#who-we-are">Who we are</a>
+                    </li>
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="#jobs">Jobs</a>
+                    </li>
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="#news">News</a>
+                    </li>
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="#contacts">Contacts</a>
+                    </li>
+                    <li class="header__nav__right__list__list-item">
+                        <a class="header__nav__right__list__list-item__link" href="D:\FrontEnd-FinalProject\investor.html">Investors</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="header__nav__burger not-active">
+                <span class="header__nav__burger__menu">
+                <em class="header__nav__burger__menu__line"></em>
+                <em class="header__nav__burger__menu__line"></em>
+                <em class="header__nav__burger__menu__line"></em>
+                </span>
+            </a>
+
+        </nav>
+    </header>
+    <!-- navbar end -->
+
+    <div id="overlay"></div>
+    <aside class="aside">
+
+        <div class="aside__container">
+            <nav class="aside__container__mobile">
+                <ul class="aside__container__mobile__list">
+                    <li style="display: none;">
+                        <a href="#"></a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="#what-we-do" data-scroll="what_we_do" class="aside__container__mobile__list__item__link">What we do</a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="#who-we-are" data-scroll="who_we_are" class="aside__container__mobile__list__item__link">Who we are</a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="#" class="aside__container__mobile__list__item__link">Executive team</a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="#jobs" data-scroll="jobs" class="aside__container__mobile__list__item__link">Jobs</a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="#news" data-scroll="news" class="aside__container__mobile__list__item__link">News</a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="#contacts" data-scroll="contact_us" class="aside__container__mobile__list__item__link">Contacts</a>
+                    </li>
+                    <li class="aside__container__mobile__list__item">
+                        <a href="D:\FrontEnd-FinalProject\investor.html" class="aside__container__mobile__list__item__link">Investors</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- slider start -->
+    <section class="first-company">
+        <div class="first-company__cover">
+            <div class="first-company__cover__info">
+                <div class="first-company__cover__info__max">
+                    <h1 data-aos="fade-up" data-aos-once="true" class="first-company__cover__info__caption">First Company in the world to launch Mobile Fintech Services</h1>
+                    <p data-aos="fade-up" data-aos-once="true" data-aos-delay="500" class="first-company__cover__info__paragraph">We are serving over 25 companies in 20 countries worldwide and this number is growing with new launches every quarter.</p>
+                </div>
+            </div>
+        </div>
+        <div class="first-company__mouse">
+            <a href="#what-we-do" id="mouse-a">
+                <div class="first-company__mouse__scroll">
+                    <img class="first-company__mouse__scroll__svg" src="./assets/icons/mouse_icon.svg" alt="mouse">
+                    <span class="first-company__mouse__scroll__text">Scroll to discover us!</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- slider end -->
+
+    <!-- light section first start -->
+    <section id="what-we-do" class="light-sc">
+        <div class="light-sc__container">
+            <div class="light-sc__container__upper">
+                <h1 class="light-sc__container__upper__head">What we do</h1>
+                <div class="light-sc__container__upper__button">
+                    <a class="light-sc__container__upper__button__link" href="D:\FrontEnd-FinalProject\what-we-do.html" target="_blank">
+                       Read more
+                    </a>
+                </div>
+            </div>
+            <div class="light-sc__container__bottom" data-aos="fade-up" data-aos-once="true">
+                <div class="light-sc__container__bottom__technology">
+                    <img src=" ./assets/icons/tech1.svg " alt="tech1 ">
+                    <h3>AI & ML based scoring</h3>
+                    <p>We determine the credit-worthiness of each client, using behavioral scoring model.</p>
+                    <a href="D:\FrontEnd-FinalProject\what-we-do.html #scoring"></a>
+                </div>
+                <div class="light-sc__container__bottom__technology">
+                    <img src="./assets/icons/tech2.svg" alt="tech1">
+                    <h3>Micro-lending technology</h3>
+                    <p>We deliver microlending solution which includes processing, disbursement, repayment, recovery and management of loans.</p>
+                    <a href="D:\FrontEnd-FinalProject\what-we-do.html #scoring-2"></a>
+                </div>
+                <div class="light-sc__container__bottom__technology">
+                    <img src=" ./assets/icons/tech3.svg " alt="tech1 ">
+                    <h3>Big data engine</h3>
+                    <p>We use latest advancements in Artificial Intelligence and Machine Learning to maximize our value proposition.</p>
+                    <a href="D:\FrontEnd-FinalProject\what-we-do.html #scoring-3"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- light section first end -->
+
+    <!-- blue section start -->
+    <section id="our-products" class="products">
+        <div class="products__container">
+            <h2 class="products__container__text">Our products</h2>
+            <div class="products__container__rounds">
+                <div class="products__container__rounds__item products__container__rounds__item--1">
+                    <svg class="products__container__rounds__item__svg">
+                        <clipPath id="clip_1" clipPathUnits="objectBoundingBox">
+                            <path d="M0.616806 1L0.383194 1C0.324305 1 0.29486 1 0.269313 0.986841C0.246737 0.975212 0.226447 0.956286 0.2101
+                                0.931609C0.191602 0.903685 0.180301 0.865679 0.157699 0.789668L0.0633424 0.472335C0.0163775 0.314387 -0.007105 0.235412
+                                0.00189482 0.17189C0.00976321 0.116354 0.0331022 0.0674665 0.0667714 0.0359959C0.105282 -2.22524e-08 0.166467
+                                -1.5227e-08 0.288837 0L0.711163 5.26399e-08C0.833533 6.78868e-08 0.894718 7.62939e-08 0.933229 0.035996C0.966898
+                                0.0674666 0.990237 0.116354 0.998105 0.17189C1.00711 0.235413 0.983623 0.314387 0.936658 0.472335L0.842301
+                                0.789668C0.819699 0.865679 0.808398 0.903685 0.7899 0.931609C0.773553 0.956286 0.753263 0.975212 0.730687
+                                0.986841C0.70514 1 0.675695 1 0.616806 1Z">
+                            </path>
+                        </clipPath>
+                    </svg>
+                    <p></p>
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--1" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--1__text">Dass</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--2">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_2" clipPathUnits="objectBoundingBox">
+                                <path d="M0.260656 0.909036L0.0909643 0.739344C0.0478522 0.696232 0.0262961 0.674676 0.0144969 0.649081C0.00406989 0.626463 -0.000856105 0.601699 0.000121687 0.576812C0.00122815 0.548651 0.0128942 0.520486 0.0362263 0.464158L0.133899 0.228356C0.182268 0.111582 0.206452 0.0531958 0.246258 0.0265982C0.281061 0.00334391 0.323676 -0.0051327 0.364728 0.00303311C0.411682 0.0123729 0.45637 0.0570601 0.545744 0.146434L0.853566 0.454256C0.94294 0.54363 0.987627 0.588317 0.996967 0.635272C1.00513 0.676324 0.996656 0.718939 0.973402 0.753742C0.946804 0.793548 0.888418 0.817732 0.771644 0.866101L0.535842 0.963774C0.479514 0.987106 0.451349 0.998772 0.423188 0.999878C0.398301 1.00086 0.373537 0.99593 0.350919 0.985503C0.325325 0.973704 0.303768 0.952148 0.260656 0.909036Z">
+                                </path>
+                            </clipPath>
+                        </svg>
+
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--2" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--2__text">MFI micro loan</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--3">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_3" clipPathUnits="objectBoundingBox">
+                                <path d="M0 0.616805L9.89884e-08 0.383194C1.23924e-07 0.324305 1.35899e-07 0.29486 0.0131594 0.269313C0.0247885 0.246737 0.0437137 0.226447 0.0683909 0.2101C0.0963151 0.191602 0.134321 0.180301 0.210332 0.157699L0.527665 0.0633424C0.685613 0.0163775 0.764588 -0.00710501 0.82811 0.00189482C0.883646 0.00976321 0.932534 0.0331022 0.964004 0.0667714C1 0.105282 1 0.166467 1 0.288836L1 0.711163C1 0.833533 1 0.894718 0.964004 0.933229C0.932533 0.966898 0.883646 0.990237 0.82811 0.998105C0.764587 1.0071 0.685614 0.983623 0.527666 0.936658L0.210332 0.842301C0.134321 0.819699 0.0963149 0.808398 0.0683907 0.7899C0.0437135 0.773553 0.0247883 0.753263 0.0131592 0.730687C-3.73523e-08 0.70514 -2.48675e-08 0.675695 0 0.616805Z"></path>
+                            </clipPath>
+                        </svg>
+
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--3" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--3__text">Bank micro loan</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--4">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_4" clipPathUnits="objectBoundingBox">
+                                <path
+                                d="M0.0909643 0.260656L0.260656 0.0909643C0.303768 0.0478523 0.325324 0.0262961 0.350919 0.0144969C0.373537 0.00406989 0.398301 -0.000856103 0.423188 0.000121686C0.451349 0.00122815 0.479514 0.0128942 0.535842 0.0362263L0.771644 0.133899C0.888418 0.182268 0.946804 0.206452 0.973402 0.246258C0.996656 0.281061 1.00513 0.323676 0.996967 0.364728C0.987627 0.411682 0.94294 0.45637 0.853566 0.545744L0.545744 0.853566C0.45637 0.94294 0.411683 0.987627 0.364728 0.996967C0.323676 1.00513 0.281061 0.996656 0.246258 0.973402C0.206452 0.946804 0.182268 0.888418 0.133899 0.771644L0.0362263 0.535842C0.0128942 0.479514 0.00122816 0.451349 0.000121688 0.423188C-0.000856108 0.398301 0.00406988 0.373537 0.0144969 0.350919C0.0262961 0.325324 0.0478522 0.303768 0.0909643 0.260656Z">
+                                </path>
+                            </clipPath>
+                        </svg>
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--4" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--4__text">Mobile wallet micro loan</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--5">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_5" clipPathUnits="objectBoundingBox">
+                                <path d="M0.383195 0L0.616806 9.89883e-08C0.675695 1.23924e-07 0.70514 1.35899e-07 0.730687 0.0131594C0.753263 0.0247884 0.773553 0.0437137 0.7899 0.0683909C0.808398 0.0963149 0.819699 0.13432 0.8423 0.21033L0.936658 0.527665C0.983623 0.685613 1.00711 0.764588 0.998105 0.82811C0.990237 0.883646 0.966898 0.932533 0.933229 0.964004C0.894718 1 0.833533 1 0.711163 1L0.288837 1C0.166467 1 0.105282 1 0.0667714 0.964004C0.0331022 0.932533 0.00976321 0.883646 0.00189482 0.82811C-0.007105 0.764587 0.0163775 0.685613 0.0633424 0.527665L0.157699 0.210332C0.180301 0.134321 0.191602 0.0963149 0.2101 0.0683907C0.226447 0.0437135 0.246737 0.0247883 0.269313 0.0131592C0.29486 -3.73522e-08 0.324305 -2.48675e-08 0.383195 0Z"></path>
+                            </clipPath>
+                        </svg>
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--5" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--5__text">BNPL</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--6">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_6" clipPathUnits="objectBoundingBox">
+                                <path d="M0.739344 0.0909643L0.909036 0.260656C0.952148 0.303768 0.973704 0.325324 0.985503 0.350919C0.99593 0.373537 1.00086 0.398301 0.999878 0.423188C0.998772 0.451349 0.987106 0.479514 0.963774 0.535842L0.866101 0.771644C0.817732 0.888418 0.793548 0.946804 0.753742 0.973402C0.718939 0.996656 0.676324 1.00513 0.635272 0.996967C0.588318 0.987627 0.543631 0.94294 0.454257 0.853567L0.146434 0.545744C0.05706 0.45637 0.0123729 0.411683 0.00303312 0.364728C-0.00513271 0.323676 0.00334391 0.281061 0.0265982 0.246258C0.0531958 0.206452 0.111582 0.182268 0.228356 0.133899L0.464158 0.0362263C0.520486 0.0128942 0.548651 0.00122816 0.576812 0.000121689C0.601699 -0.00085611 0.626463 0.00406988 0.649081 0.0144969C0.674676 0.0262961 0.696232 0.0478521 0.739344 0.0909643Z"></path>
+                            </clipPath>
+                        </svg>
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--6" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--6__text">Airtime credit</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--7">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_7" clipPathUnits="objectBoundingBox">
+                                <path
+                                d="M1 0.383194L1 0.616805C1 0.675695 1 0.70514 0.986841 0.730687C0.975212 0.753263 0.956286 0.773553 0.931609 0.7899C0.903685 0.808398 0.865679 0.819699 0.789668 0.842301L0.472335 0.936658C0.314387 0.983623 0.235412 1.00711 0.17189 0.998105C0.116354 0.990237 0.0674665 0.966898 0.0359959 0.933229C-1.58946e-08 0.894718 -1.04365e-08 0.833533 0 0.711163L3.60686e-08 0.288837C4.65163e-08 0.166467 5.08626e-08 0.105282 0.035996 0.0667714C0.0674666 0.0331022 0.116354 0.00976321 0.17189 0.00189482C0.235413 -0.007105 0.314387 0.0163775 0.472335 0.0633424L0.789668 0.157699C0.865679 0.180301 0.903685 0.191602 0.931609 0.2101C0.956286 0.226447 0.975212 0.246737 0.986841 0.269313C1 0.29486 1 0.324305 1 0.383194Z"></path>
+                            </clipPath>
+                        </svg>
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--7" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--7__text">Scoring engine</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__item products__container__rounds__item--8">
+                    <svg class="products__container__rounds__item__svg">
+                            <clipPath id="clip_8" clipPathUnits="objectBoundingBox">
+                                <path d="M0.909036 0.739344L0.739344 0.909036C0.696231 0.952148 0.674675 0.973704 0.649081 0.985503C0.626463 0.99593 0.601698 1.00086 0.576812 0.999878C0.54865 0.998772 0.520486 0.987106 0.464157 0.963774L0.228356 0.866101C0.111582 0.817732 0.0531958 0.793548 0.0265982 0.753742C0.00334391 0.718939 -0.0051327 0.676324 0.00303311 0.635272C0.0123729 0.588318 0.0570601 0.54363 0.146434 0.454256L0.454256 0.146434C0.54363 0.05706 0.588317 0.0123729 0.635272 0.00303312C0.676324 -0.00513271 0.718939 0.00334391 0.753742 0.0265982C0.793548 0.0531958 0.817732 0.111582 0.866101 0.228356L0.963774 0.464157C0.987106 0.520486 0.998772 0.548651 0.999878 0.576812C1.00086 0.601699 0.99593 0.626463 0.985503 0.649081C0.973704 0.674676 0.952148 0.696232 0.909036 0.739344Z"></path>
+                            </clipPath>
+                        </svg>
+                    <a class="products__container__rounds__item__link products__container__rounds__item__link--8" href="javascript:void(0);">
+                        <span class="products__container__rounds__item__link__text products__container__rounds__item__link--8__text">Safe data monetization gateway</span>
+                    </a>
+                </div>
+                <div class="products__container__rounds__wrapper">
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                    <p class="products__container__rounds__wrapper__text">Data as a Service (DaaS) is a complex approach aimed at monetization of MNO’s Big Data relying on advanced techniques in analyzing telco usage. A user-friendly and fast ecosystem is built for various providers of goods and services
+                        be equipped with access to valuable data for making lending decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- city section start -->
+    <section class="city-sc">
+        <div class="city-sc__container">
+            <div class="city-sc__container__left" data-aos="fade-right" data-aos-once="true">
+                <h1 class="city-sc__container__left__head">Tech-Powered Financial Solutions</h1>
+            </div>
+            <div class="city-sc__container__right" data-aos-duration="3000" data-aos-delay="500" data-aos="fade-down" data-aos-once="true">
+                <ul class="city-sc__container__right__list" data-aos-duration="1500" data-aos="fade-up">
+                    <li class="city-sc__container__right__list__item">AI and ML based scoring engine</li>
+                    <li class="city-sc__container__right__list__item">End-to-end lending technology</li>
+                    <li class="city-sc__container__right__list__item">High-performing and secure operating platform</li>
+                    <li class="city-sc__container__right__list__item">Fast and consistent decision making</li>
+                    <li class="city-sc__container__right__list__item">Flexible customizable solution</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- city section end -->
+
+    <!-- statistics section start -->
+    <section id="who-we-are" class="statistics">
+        <div class="statistics__container">
+            <h2 class="statistics__container__head">Enhance your opportunities with us</h2>
+            <div class="statistics__container__three">
+                <div class="statistics__container__three__wrapper">
+                    <div class="statistics__container__three__wrapper__nums">
+                        <h3 id="load-1" class="statistics__container__three__wrapper__nums__head counter">220</h3>
+                        <span class="statistics__container__three__wrapper__nums__text">Million</span>
+                    </div>
+                    <p class="statistics__container__three__wrapper__par">TRANSACTIONS PER DAY</p>
+                </div>
+                <div class="statistics__container__three__wrapper">
+                    <div class="statistics__container__three__wrapper__nums">
+                        <h3 id="load-2" class="statistics__container__three__wrapper__nums__head counter">25</h3>
+                        <span class="statistics__container__three__wrapper__nums__text">Countries</span>
+                    </div>
+                    <p class="statistics__container__three__wrapper__par">OUR GLOBAL PRESENCE</p>
+
+                </div>
+                <div class="statistics__container__three__wrapper">
+                    <div class="statistics__container__three__wrapper__nums">
+                        <h3 id="load-3" class="statistics__container__three__wrapper__nums__head counter">3</h3>
+                        <span class="statistics__container__three__wrapper__nums__text">Million</span>
+                    </div>
+                    <p class="statistics__container__three__wrapper__par">TRANSACTIONS PER DAY</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- statistics section end -->
+
+    <!-- map section start -->
+    <section class="map">
+        <div class="map__container">
+            <div class="map__container__svg">
+
+            </div>
+            <div class="map__container__head">
+                <h2 class="map__container__head__geo">Simbrella Geography</h2>
+            </div>
+            <div class="map__container__info">
+                <div class="map__container__info__operation">
+                    <p class="map__container__info__operation__circle"></p>
+                    <p class="map__container__info__operation__circle"></p>
+                    <p class="map__container__info__operation__circle"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- client section start -->
+    <section class="client">
+        <div class="client__container">
+            <h2 class="client__container__head">Our clients</h2>
+            <div class="client__container__grid" data-aos="fade-up" data-aos-once="true">
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/azercell.svg" alt="azercell">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/nar.svg" alt="nar">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/orange.svg" alt="orange">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/vodafone.png" alt="vodefone">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/firstbank.svg" alt="firstbank">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/mor.svg" alt="mor">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/red.svg" alt="airtel">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/telecom.png" alt="telecom">
+                </div>
+                <div class="client__container__grid__figure">
+                    <img class="client__container__grid__figure__img" src="./assets/imgs/mtn.svg" alt="">
+                </div>
+                <div class="client__container__grid__figure">
+                    <div class="client__container__grid__figure__links-client">
+                        <span>&amp; over 15 more clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- client section end -->
+
+    <!-- executive-team section start -->
+    <section class="team">
+        <div class="team__container">
+            <h2 class="team__container__head">Executive team</h2>
+            <div class="team__container__collective">
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/seymur_mammadov-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Seymur Mammadov</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Executive Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/ramiz_lyapin-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Ramiz Lyapin</h3>
+                        <p class="team__container__collective__officer__bottom__par">Advisor to the Chief Executive Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/tamerlan-gamidzadeh-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Tamerlan Gamidzadeh</h3>
+                        <p class="team__container__collective__officer__bottom__par">Financial Advisor to the Chief Executive Officer</p>
+                    </div>
+                </div> <br>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/shamsiyya_ismayilova-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Shamsiya Ismayilova</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief HR &amp; Administrative Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/ali_akbar_mammadov-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Ali Akbar Mammadov</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Commercial Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/elman-talybov-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Elman Talybov</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Strategy Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/rauf_ismayilov-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Rauf Ismayilov</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Technology Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/anar-aliyev-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Anar Aliyev</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Data Science &amp; Analytics Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/farhad-huseynov-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Farhad Huseynov</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Financial Officer</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/natiq_alasgarzade-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Natiq Alasgarzade</h3>
+                        <p class="team__container__collective__officer__bottom__par">Project Management Office Director</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/bendeguz_seres-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Bendeguz Seres</h3>
+                        <p class="team__container__collective__officer__bottom__par">Sales &amp; Accounts Head</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/eldar_novruzov-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Eldar Novruzov</h3>
+                        <p class="team__container__collective__officer__bottom__par">Regional Sales &amp; Accounts Management Director</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg__img" src="./assets/imgs/elnur_rzazade-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Elnur Rzazade</h3>
+                        <p class="team__container__collective__officer__bottom__par">Regional Sales &amp; Accounts Management Director</p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg" src="./assets/imgs/selbin-alakbarova-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Selbin Alakbarova</h3>
+                        <p class="team__container__collective__officer__bottom__par">Chief Product Officer<br> FinTech
+                        </p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg" src="./assets/imgs/fuad-musayev-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Fuad Musayev</h3>
+                        <p class="team__container__collective__officer__bottom__par">Global Development Lead<br> FinTech
+                        </p>
+                    </div>
+                </div>
+                <div class="team__container__collective__officer">
+                    <div class="team__container__collective__officer__bg">
+                        <img class="team__container__collective__officer__bg" src="./assets/imgs/murad-jalilzadeh-1.png" alt="">
+                    </div>
+                    <div class="team__container__collective__officer__bottom">
+                        <h3 class="team__container__collective__officer__bottom__head">Murad Jalilzadeh</h3>
+                        <p class="team__container__collective__officer__bottom__par">Senior Product Owner<br> FinTech
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- executive-team section end -->
+
+    <!-- work-with-us section start -->
+    <section id="jobs" class="job">
+        <div class="job__container">
+            <div class="job__container__upper" data-aos-once="true" data-aos-duration="1000" data-aos="fade-up">
+                <h2 class="job__container__upper__head">Work with us</h2>
+                <div class="job__container__upper__three">
+                    <div class="job__container__upper__three__item">
+                        <div class="job__container__upper__three__item__icon">
+                            <img src="./assets/icons/advantage_icon_1.svg" alt="">
+                        </div>
+                        <p class="job__container__upper__three__item__cap">Growth And Development</p>
+                    </div>
+                    <div class="job__container__upper__three__item">
+                        <div class="job__container__upper__three__item__icon">
+                            <img src="./assets/icons/advantage_icon_2.svg" alt="">
+                        </div>
+                        <p class="job__container__upper__three__item__cap">Smart And Motivated Team</p>
+                    </div>
+                    <div class="job__container__upper__three__item">
+                        <div class="job__container__upper__three__item__icon">
+                            <img src="./assets/icons/advantage_icon_3.svg" alt="">
+                        </div>
+                        <p class="job__container__upper__three__item__cap">Care About Values</p>
+                    </div>
+                </div>
+            </div>
+            <div class="job__container__bottom" data-aos-once="true" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="400">
+                <div class="job__container__bottom__left">
+                    <img class="job__container__bottom__left__img" src="./assets/imgs/advantage_image-1.jpg" alt="">
+                </div>
+                <div class="job__container__bottom__right">
+                    <h3 class="job__container__bottom__right__become">Become part of our team</h3>
+                    <p class="job__container__bottom__right__text">We are looking for passionate and talented people to join our growing team. If you want to find out your highest heart rate and fill up your life with passion, then welcome to Simbrella.</p>
+                    <div class="job__container__bottom__right__btn">
+                        <a class="job__container__bottom__right__btn__link" href="D:\FrontEnd-FinalProject\all-vacancies.html">All vacancies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- work-with-us section end -->
+
+    <!-- news section start -->
+    <section id="news" class="news" data-aos-once="true" data-aos-duration="1000" data-aos="fade-up">
+        <div class="news__container">
+            <div class="news__container__upper">
+                <h2 class="news__container__upper__head">Latest news</h2>
+                <div class="news__container__upper__button">
+                    <a class="news__container__upper__button__link" href="D:\FrontEnd-FinalProject\news.html">
+                        All news
+                    </a>
+                </div>
+            </div>
+            <div class="news__container__bottom">
+                <a class="for-zoom" href="">
+                    <div id="for-card" class="news__container__bottom__card">
+                        <div class="news__container__bottom__card__img">
+                            <img class="news__container__bottom__card__img__pic" src="./assets/imgs/simbrella_p_1_1.jpg" alt="">
+                        </div>
+                        <p class="news__container__bottom__card__text">
+                            Simbrella participated at important event held by Bank of Africa Group, September 2021, Istanbul Turkey
+                        </p>
+                        <p class="news__container__bottom__card__date">
+                            September 2021
+                        </p>
+                        <a class="news__container__bottom__card__link" href="D:\FrontEnd-FinalProject\news-details.html"></a>
+                    </div>
+                </a>
+                <a class="for-zoom" href="">
+                    <div class="news__container__bottom__card">
+                        <div class="news__container__bottom__card__img">
+                            <img class="news__container__bottom__card__img__pic" src="./assets/imgs/greenot.jpg" alt="">
+                        </div>
+                        <p class="news__container__bottom__card__text">
+                            Simbrella has donated to forest restoration project to plant 1,000 trees in Albertine Rift, Uganda
+                        </p>
+                        <p class="news__container__bottom__card__date">
+                            June 2021
+                        </p>
+                        <a class="news__container__bottom__card__link" href="D:\FrontEnd-FinalProject\news-details.html"></a>
+                    </div>
+                </a>
+                <a class="for-zoom" href="">
+                    <div class="news__container__bottom__card">
+                        <div class="news__container__bottom__card__img">
+                            <img class="news__container__bottom__card__img__pic" src="./assets/imgs/simbirella.jpg" alt="">
+                        </div>
+                        <p class="news__container__bottom__card__text">
+                            Simbrella receives ISO 27001 certification for succesful implementation of Information Security Management System
+                        </p>
+                        <p class="news__container__bottom__card__date">
+                            May 2021
+                        </p>
+                        <a class="news__container__bottom__card__link" href="D:\FrontEnd-FinalProject\news-details.html"></a>
+                    </div>
+                </a>
+                <a class="for-zoom" href="">
+                    <div class="news__container__bottom__card">
+                        <div class="news__container__bottom__card__img">
+                            <img class="news__container__bottom__card__img__pic" src="./assets/imgs/blackgirl2.png" alt="">
+                        </div>
+                        <p class="news__container__bottom__card__text">
+                            Simbrella launches "Lajor" - digital micro-lending product for Orange Money mobile wallets in Sierra Leone.
+
+                        </p>
+                        <p class="news__container__bottom__card__date">
+                            September 2020
+                        </p>
+                        <a class="news__container__bottom__card__link" href="D:\FrontEnd-FinalProject\news-details.html"></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- news section end -->
+
+    <footer id="contacts" class="footer">
+        <div class="footer__container">
+            <div class="footer__container__upper">
+                <h2 class="footer__container__upper__head">
+                    Contacts
+                </h2>
+                <div class="footer__container__upper__right">
+                    <div class="footer__container__upper__right__header">
+                        <nav class="footer__container__upper__right__header__nav">
+                            <ul class="footer__container__upper__right__header__nav__list">
+                                <li class="footer__container__upper__right__header__nav__list__list-item">
+                                    <a class="footer__container__upper__right__header__nav__list__list-item__link color" href="#footer">AMSTERDAM</a>
+                                </li>
+                                <li class="footer__container__upper__right__header__nav__list__list-item">
+                                    <a class="footer__container__upper__right__header__nav__list__list-item__link" href="#footer">BAKU</a>
+                                </li>
+                                <li class="footer__container__upper__right__header__nav__list__list-item">
+                                    <a class="footer__container__upper__right__header__nav__list__list-item__link" href="#footer">SINGAPORE</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="footer__container__upper__right__header__btn">
+                            <a class="footer__container__upper__right__header__btn__link" href="D:\FrontEnd-FinalProject\our-branches.html">
+                              Our branches
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__container__upper__right__address">
+                        <ul class="footer__container__upper__right__address__list active ">
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    Headquarters
+                                </span>
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    Teleportboulevard 130, Scalehub, Unit number 1.08, 1043 EJ Amsterdam, Netherlands
+                                </p>
+                            </li>
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    E-mail
+                                </span>
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    amsterdam@simbrella.com
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="footer__container__upper__right__address__list">
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    Main Operations Office
+                                </span>
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    Jalil Mammadguluzadeh st. 102 A, City Point Business Centre, AZ1022, Baku, Azerbaijan
+                                </p>
+                            </li>
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    E-mail
+                                </span>
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    baku@simbrella.com
+                                </p>
+                            </li>
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    Contact number
+                                </span>
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    +994 12 404 31 32
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="footer__container__upper__right__address__list">
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    APAC Region Office
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    163 Tras Street, #07-02, Lian Huat Building, 079024, Singapore
+                                </p>
+                            </li>
+                            <li class="footer__container__upper__right__address__list__list-item">
+                                <span class="footer__container__upper__right__address__list__list-item__cap">
+                                    E-mail
+                                </span>
+                                <p class="footer__container__upper__right__address__list__list-item__par">
+                                    singapore@simbrella.com
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__container__bottom">
+                <div class="footer__container__bottom__left">
+                    <p class="footer__container__bottom__left__text">Site by</p>
+                    <a class="footer__container__bottom__left__link" href="">
+                        <img class="footer__container__bottom__left__link__icon" src="./assets/imgs/nal.svg" alt="nal"> Jeykhun Imanov Studio
+                    </a>
+                </div>
+                <div class="footer__container__bottom__right">
+                    <span class="footer__container__bottom__right__copy">Copyright © 2022. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./assets/js/counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    </script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        AOS.init({
+            // offset: 100,
+
+        });
+    </script>
+
+</body>
+
+</html>

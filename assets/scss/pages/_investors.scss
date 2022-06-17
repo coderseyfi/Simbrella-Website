@@ -1,0 +1,506 @@
+.story {
+    padding: 90px 0;
+    background-color: #F6F8FE;
+    overflow: hidden;
+    @include forClientSection {
+        padding: 30px 0;
+    }
+    @include forClientSectionTablet {
+        padding: 40px 0;
+    }
+    &__container {
+        @include flexbox(stretch, space-between);
+        align-content: stretch;
+        @include allContainer();
+        @include forClientSection {
+            display: block;
+        }
+        @include forClientSectionTablet {
+            display: block;
+        }
+        &__left {
+            width: calc(50% - 15px);
+            @include forClientSection {
+                width: 100%;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+            }
+            &__inner {
+                min-height: 626px;
+                @include forClientSection {
+                    min-height: 1px;
+                }
+                @include forClientSectionTablet {
+                    min-height: 1px;
+                }
+                &__text {
+                    font-size: 18px;
+                    line-height: 1.56;
+                    color: #222;
+                    @include forClientSection {
+                        font-size: 16px;
+                    }
+                    @include forClientSectionTablet {
+                        font-size: 16px;
+                    }
+                    &__cap {
+                        padding: 0 0 24px;
+                        font-weight: bold;
+                        font-size: 56px;
+                        line-height: 1.29;
+                        color: #2D3192;
+                        @include forClientSectionTablet {
+                            padding: 0 0 16px;
+                            font-size: 32px;
+                        }
+                    }
+                    &__par {
+                        padding: 0 0 24px;
+                        @include forClientSection {
+                            padding: 0 0 16px;
+                        }
+                        @include forClientSectionTablet {
+                            padding: 0 0 16px;
+                        }
+                    }
+                }
+            }
+            &__year {
+                width: 100%;
+                height: 700px;
+                text-align: center;
+                position: relative;
+                @include forClientSection {
+                    height: 80vw;
+                }
+                @include forClientSectionTablet {
+                    height: 80vw;
+                }
+                &::before {
+                    left: calc(50% - 0px);
+                    top: 36px;
+                    transform: rotate(180deg);
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: calc(100% - 170px);
+                    height: 2px;
+                    background-color: #2D3192;
+                    position: absolute;
+                    left: calc(50% + 100px);
+                    top: 36px;
+                }
+                &__em {
+                    display: inline-block;
+                    width: 424px;
+                    height: 424px;
+                    border: 2px solid #2D3192;
+                    position: absolute;
+                    left: calc(50% - 212px);
+                    top: calc(50% - 212px);
+                    border-radius: 50%;
+                    @include forClientSection {
+                        width: 60vw;
+                        height: 60vw;
+                        left: calc(50% - 30vw);
+                        top: calc(50% - 30vw);
+                    }
+                    @include forClientSectionTablet {
+                        width: 60vw;
+                        height: 60vw;
+                        left: calc(50% - 30vw);
+                        top: calc(50% - 30vw);
+                    }
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: calc(100% - 50px);
+                        height: calc(100% - 50px);
+                        background-color: #fff;
+                        position: absolute;
+                        left: 25px;
+                        top: 25px;
+                        border-radius: 50%;
+                    }
+                }
+                &__strong {
+                    display: inline-block;
+                    width: 424px;
+                    height: 424px;
+                    border: 2px solid #2D3192;
+                    position: absolute;
+                    left: auto;
+                    right: calc(100% + 60px);
+                    top: calc(50% - 212px);
+                    border-radius: 50%;
+                }
+                &__date {
+                    font-weight: bold;
+                    font-size: 210px;
+                    line-height: 700px;
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                    color: #FF931E;
+                    position: relative;
+                    @include forClientSection {
+                        line-height: 80vw;
+                        font-size: 30vw;
+                    }
+                    @include forClientSectionTablet {
+                        line-height: 80vw;
+                        font-size: 30vw;
+                    }
+                }
+            }
+        }
+        &__right {
+            width: calc(50% - 15px);
+            @include forClientSection {
+                width: 100%;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+            }
+            &::before {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: calc(32%);
+                bottom: -55%;
+                border: none;
+                border-right: 2px solid #2D3192;
+                border-bottom: 2px solid #2D3192;
+                border-radius: 0 0 100% 0;
+                transform: rotate(180deg);
+            }
+            &__year {
+                width: 100%;
+                height: 700px;
+                text-align: center;
+                position: relative;
+                @include forClientSection {
+                    height: 80vw;
+                }
+                @include forClientSectionTablet {
+                    height: 80vw;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    left: calc(50% - 100px);
+                    bottom: 36px;
+                    border: none;
+                    border-right: 2px solid #2D3192;
+                    border-bottom: 2px solid #2D3192;
+                    border-radius: 0 0 100% 0;
+                }
+                &__em {
+                    display: inline-block;
+                    width: 424px;
+                    height: 424px;
+                    border: 2px solid #2D3192;
+                    position: absolute;
+                    left: calc(50% - 212px);
+                    top: calc(50% - 212px);
+                    border-radius: 50%;
+                    @include forClientSection {
+                        width: 60vw;
+                        height: 60vw;
+                        left: calc(50% - 30vw);
+                        top: calc(50% - 30vw);
+                    }
+                    @include forClientSectionTablet {
+                        width: 60vw;
+                        height: 60vw;
+                        left: calc(50% - 30vw);
+                        top: calc(50% - 30vw);
+                    }
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: calc(100% - 50px);
+                        height: calc(100% - 50px);
+                        background-color: #fff;
+                        position: absolute;
+                        left: 25px;
+                        top: 25px;
+                        border-radius: 50%;
+                    }
+                }
+                &__strong {
+                    display: inline-block;
+                    width: 424px;
+                    height: 424px;
+                    border: 2px solid #2D3192;
+                    position: absolute;
+                    left: calc(100% + 60px);
+                    top: calc(50% - 212px);
+                    border-radius: 50%;
+                }
+                &__date {
+                    font-weight: bold;
+                    font-size: 210px;
+                    line-height: 700px;
+                    text-align: center;
+                    color: #FF931E;
+                    position: relative;
+                    @include forClientSection {
+                        line-height: 80vw;
+                        font-size: 30vw;
+                    }
+                    @include forClientSectionTablet {
+                        line-height: 80vw;
+                        font-size: 30vw;
+                    }
+                }
+            }
+            &__inner {
+                min-height: 626px;
+                @include forClientSection {
+                    min-height: 1px;
+                }
+                @include forClientSectionTablet {
+                    min-height: 1px;
+                }
+                &__text {
+                    font-size: 18px;
+                    line-height: 1.56;
+                    color: #222;
+                    @include forClientSectionTablet {
+                        font-size: 16px;
+                    }
+                    &__par {
+                        padding: 0 0 24px;
+                        @include forClientSectionTablet {
+                            padding: 0 0 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.conformity {
+    padding: 90px 0;
+    background-color: #F6F8FE;
+    overflow: hidden;
+    @include forClientSection {
+        padding: 30px 0;
+    }
+    @include forClientSectionTablet {
+        padding: 40px 0;
+    }
+    &__container {
+        @include flexbox(stretch, space-between);
+        align-content: stretch;
+        @include allContainer();
+        @include forClientSection {
+            display: block;
+        }
+        @include forClientSectionTablet {
+            display: block;
+        }
+        &__left {
+            width: calc(50% - 15px);
+            @include forClientSection {
+                width: 100%;
+                padding: 0 0 24px;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+                padding: 0 0 24px;
+            }
+            &__text {
+                font-size: 18px;
+                line-height: 1.56;
+                color: #222;
+                @include forClientSection {
+                    font-size: 16px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 16px;
+                }
+                &__cap {
+                    padding: 0 0 40px;
+                    font-weight: 600;
+                    font-size: 48px;
+                    line-height: 1.33;
+                    color: #222;
+                    @include forClientSection {
+                        padding: 0 0 16px;
+                        font-size: 27px;
+                    }
+                    @include forClientSectionTablet {
+                        padding: 0 0 16px;
+                        font-size: 32px;
+                    }
+                }
+                &__p {
+                    padding: 0 0 40px;
+                    @include forClientSection {
+                        padding: 0 0 40px;
+                    }
+                    @include forClientSectionTablet {
+                        padding: 0 0 16px;
+                    }
+                }
+                &__list {
+                    list-style: none;
+                    &__list-item {
+                        margin: 0 0 24px;
+                        padding: 0 0 0 21px;
+                        position: relative;
+                        @include forClientSectionTablet {
+                            margin: 0 0 16px;
+                        }
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 8px;
+                            height: 8px;
+                            background-color: #FF931E;
+                            position: absolute;
+                            left: 0;
+                            top: 10px;
+                            border-radius: 50%;
+                            @include forClientSectionTablet {
+                                top: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__right {
+            width: calc(50% - 15px);
+            @include forClientSection {
+                width: 100%;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+            }
+            &__form {
+                padding: 48px;
+                border: 2px solid #2D3192;
+                background-color: #fff;
+                border-radius: 24px;
+                box-shadow: 0 2px 0 0 #2d3192;
+                @include forClientSection {
+                    padding: 24px
+                }
+                @include forClientSectionTablet {
+                    padding: 24px;
+                }
+                &__vacancy {
+                    &__hidden {
+                        display: block;
+                        width: 100%;
+                        height: 56px;
+                        padding: 0 20px;
+                        border: 1px solid #DDDEE1;
+                        font-size: 16px;
+                        color: #000;
+                        font-family: 'fooont';
+                        border-radius: 12px;
+                    }
+                    &__head {
+                        padding: 0 0 32px;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 1.56;
+                        color: #222;
+                        @include forClientSection {
+                            padding: 0 0 16px;
+                            font-size: 16px;
+                        }
+                    }
+                    &__two-input {
+                        @include flexbox(center, space-between);
+                        align-content: stretch;
+                        padding: 0 0 24px;
+                        @include forClientSection {
+                            display: block;
+                        }
+                        input {
+                            width: calc(50% - 10px);
+                            display: block;
+                            width: 100%;
+                            height: 56px;
+                            padding: 0 20px;
+                            margin-right: 15px;
+                            border: 1px solid #DDDEE1;
+                            font-size: 16px;
+                            color: #000;
+                            border-radius: 12px;
+                            &:last-child {
+                                margin: 0;
+                            }
+                            &:first-child {
+                                @include forClientSection {
+                                    margin: 0 0 24px;
+                                }
+                            }
+                        }
+                    }
+                    &__input {
+                        padding: 0 0 24px;
+                        input {
+                            display: block;
+                            width: 100%;
+                            height: 56px;
+                            padding: 0 20px;
+                            border: 1px solid #DDDEE1;
+                            font-size: 16px;
+                            color: #000;
+                            border-radius: 12px;
+                        }
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            height: 140px;
+                            padding: 16px 20px;
+                            border: 1px solid #DDDEE1;
+                            font-size: 16px;
+                            color: #000;
+                            border-radius: 12px;
+                            resize: none;
+                        }
+                    }
+                    &__button {
+                        text-align: right;
+                        button {
+                            @include forClientSection {
+                                width: 100%;
+                            }
+                            display: inline-block;
+                            width: calc(50% - 15px);
+                            height: 64px;
+                            padding: 0 48px 0 24px;
+                            border: none;
+                            font-weight: 600;
+                            font-size: 15px;
+                            line-height: 64px;
+                            color: #fff;
+                            text-align: left;
+                            text-decoration: none;
+                            background-color: #FF931E;
+                            background-repeat: no-repeat;
+                            background-position: calc(100% - 24px) 50%;
+                            background-image: url("https://www.simbrella.com/site/templates/img/link_white_arrow.svg");
+                            border-radius: 12px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
