@@ -6,8 +6,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("https://www.simbrella.com/site/assets/files/1040/cover.jpg");
-    @include forPhone {
-        width: 100%;
+    @include forClientSection {
+        background-position: 65% 50%;
+    }
+    @include forClientSectionTablet {
+        background-position: 60% 50%;
+    }
+    @include forClientSectionComp {
         background-position: 60% 50%;
     }
     &__cover {
@@ -21,31 +26,60 @@
             color: white;
             position: relative;
             margin: 0 auto;
+            @include forClientSection {
+                top: 15%;
+            }
+            @include forClientSectionTablet {
+                top: 20%;
+            }
             &__max {
                 max-width: 620px;
+                @include forClientSection {
+                    max-width: 68%;
+                    padding: 35vw 0 0px;
+                }
+                @include forClientSectionTablet {
+                    padding: 120px 0 90px;
+                }
+                @include forClientSectionComp {
+                    background-position: 60% 50%;
+                }
             }
             &__caption {
                 font-size: 48px;
-                line-height: 1.30;
+                line-height: 1.3;
                 padding-bottom: 16px;
                 transition: 2s;
-                @include forPhone {
+                @include forClientSection {
+                    font-size: 24px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 27px;
+                }
+                @include forClientSectionComp {
                     font-size: 32px;
                 }
             }
             &__paragraph {
                 line-height: 1.9;
-                font-size: 15px
+                font-size: 15px;
             }
         }
     }
     &__mouse {
+        display: block;
         width: 100%;
         position: absolute;
         left: 0;
         bottom: 5%;
         #mouse-a {
             text-decoration: none;
+        }
+        @include forClientSection {
+            display: none;
+        }
+        @include forClientSectionTablet {
+            display: none;
         }
         &__scroll {
             max-width: 1140px;
@@ -60,6 +94,7 @@
                 padding-left: 10px;
                 text-decoration: none;
                 color: white;
+                font-size: 14px;
             }
         }
     }
@@ -81,8 +116,18 @@
             }
             &__head {
                 font-size: 36px;
-                color: #2D3192;
+                color: #2d3192;
                 line-height: 1.3;
+                @include forClientSection {
+                    font-size: 24px;
+                    padding: 0 0 10px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 27px;
+                }
+                @include forClientSectionComp {
+                    font-size: 32px;
+                }
             }
             &__button {
                 &__link {
@@ -101,14 +146,14 @@
                     background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
                 }
                 &__link:hover {
-                    border: 3.5px solid #FF931E;
+                    border: 3.5px solid #ff931e;
                     transition: 0.4s;
                     background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
                     background-repeat: no-repeat;
                 }
             }
             &__btn:hover {
-                border: 3.5px solid #FF931E;
+                border: 3.5px solid #ff931e;
                 width: calc(100% - 19px) 50%;
                 transition: 0.4s;
             }
@@ -164,7 +209,7 @@
 //blue section start
 .products {
     padding: 60px 0;
-    background-color: #2D3192;
+    background-color: #2d3192;
     background-repeat: no-repeat;
     background-position: 50%;
     background-image: url("https://www.simbrella.com/site/templates/img/products_bg.svg");
@@ -197,7 +242,7 @@
             }
         }
         &__rounds {
-            max-width: 618px;
+            width: 618px;
             height: 624px;
             margin: 0 auto;
             position: relative;
@@ -219,6 +264,10 @@
             }
             &__item {
                 transition: 0.3s;
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0.9);
+                transition: 0.9s cubic-bezier(0.39, 0.575, 0.565, 1);
                 &--1 {
                     width: 210px;
                     height: 150px;
@@ -232,6 +281,7 @@
                     position: absolute;
                     left: 386px;
                     top: 31px;
+                    transition-delay: 0.1s;
                 }
                 &--3 {
                     width: 150px;
@@ -239,6 +289,7 @@
                     position: absolute;
                     left: 468px;
                     top: 208px;
+                    transition-delay: 0.2s;
                 }
                 &--4 {
                     width: 202px;
@@ -246,6 +297,7 @@
                     position: absolute;
                     left: 386px;
                     top: 390px;
+                    transition-delay: 0.3s;
                 }
                 &--5 {
                     width: 210px;
@@ -253,6 +305,7 @@
                     position: absolute;
                     left: 204px;
                     top: 474px;
+                    transition-delay: 0.4s;
                 }
                 &--6 {
                     width: 202px;
@@ -260,6 +313,7 @@
                     position: absolute;
                     top: 390px;
                     left: 28px;
+                    transition-delay: 0.5s;
                 }
                 &--7 {
                     width: 150px;
@@ -267,6 +321,7 @@
                     position: absolute;
                     left: 0;
                     top: 208px;
+                    transition-delay: 0.6s;
                 }
                 &--8 {
                     width: 202px;
@@ -274,6 +329,7 @@
                     position: absolute;
                     left: 29px;
                     top: 31px;
+                    transition-delay: 0.7s;
                 }
                 &__svg {
                     position: absolute;
@@ -367,9 +423,9 @@
                     text-align: center;
                     color: #fff;
                     text-decoration: none;
-                    background-color: #3595EE;
+                    background-color: #3595ee;
                     object-fit: cover;
-                    transform: scale(1.00);
+                    transform: scale(1);
                     transition: 0.2s;
                     opacity: 1;
                     @include forClientSectionTablet {
@@ -414,15 +470,31 @@
                     visibility: hidden;
                     transition: 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
                     transition-delay: 0s;
+                    @include forClientSection {
+                        padding: 18px;
+                        background-color: #fff;
+                        color: #2d3192;
+                    }
+                    @include forClientSectionTablet {
+                        padding: 18px;
+                        background-color: #fff;
+                        color: #2d3192;
+                    }
                 }
             }
         }
     }
 }
 
+.seem {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0px) scale(1);
+}
+
 //city section start
 .city-sc {
-    background-color: #F6F8FE;
+    background-color: #f6f8fe;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -437,19 +509,38 @@
             display: block;
         }
         &__left {
-            width: 49.9%;
-            font-size: 34px;
+            width: calc(50% - 0px);
+            padding: 0 40px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #fff;
+            text-shadow: 2px 2px 6px black;
             @include forCitySection {
                 width: 100%;
                 height: 250px;
             }
             &__head {
-                padding-left: 20%;
-                padding-right: 18%;
-                @include forCitySection {
-                    font-size: 22px;
-                    padding-top: 15%;
-                    padding-left: 28%;
+                display: block;
+                max-width: 520px;
+                margin: 0 auto;
+                @include forClientSection {
+                    padding: 60px 0px 27px;
+                    width: 100%;
+                    font-size: 24px;
+                    line-height: 1.7;
+                    text-align: center;
+                }
+                @include forClientSectionTablet {
+                    padding: 75px 20px 75px;
+                    width: 100%;
+                    font-size: 27px;
+                    line-height: 1.7;
+                    text-align: center;
+                }
+                @include forClientSectionComp {
+                    font-size: 32px;
                 }
             }
         }
@@ -474,8 +565,22 @@
                     font-size: 20px;
                     border-bottom: 1px solid rgba(107, 107, 107, 0.683);
                     font-weight: 700;
-                    @include forCitySection {
+                    @include forClientSection {
                         padding: 20px 0px;
+                        font-size: 17px;
+                        font-weight: 500;
+                        text-align: center;
+                        line-height: 1.4;
+                    }
+                    @include forClientSectionTablet {
+                        padding: 20px 0px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        text-align: center;
+                        line-height: 1.4;
+                    }
+                    @include forClientSectionComp {
+                        font-size: 18px;
                     }
                 }
             }
@@ -486,7 +591,10 @@
 // statistics section start
 .statistics {
     min-height: calc(100vh - 80px);
-    padding: 60px 0 0px;
+    padding: 30px 0 0px;
+    @include forClientSection {
+        padding: 30px 0px;
+    }
     @include forClientSectionTablet {
         padding: 0px 0px;
     }
@@ -514,7 +622,7 @@
             font-weight: bold;
             font-size: 36px;
             line-height: 1.29;
-            color: #2D3192;
+            color: #2d3192;
             @include forClientSectionComp {
                 font-size: 32px;
                 padding: 0 0 10px;
@@ -524,7 +632,7 @@
                 padding: 0 0 10px;
             }
             @include forClientSection {
-                font-size: 27px;
+                font-size: 24px;
             }
         }
         &__three {
@@ -536,12 +644,12 @@
             }
             @include forClientSectionTablet {
                 padding: 0px 20px;
-                display: block
+                display: block;
             }
             @include forClientSection {
-                padding: 0px 20px;
                 display: block;
-                text-align: -webkit-center;
+                padding: 0px 0;
+                border: none !important;
             }
             @include flexbox(stretch,
             space-between);
@@ -549,27 +657,37 @@
             align-content: stretch;
             &__wrapper {
                 width: calc(33.333% - 20px);
+                @include forClientSectionComp {
+                    width: calc(33.333% - 10px);
+                }
                 @include forClientSectionTablet {
-                    padding: 20px 0px;
+                    width: 100%;
+                    padding: 20px 0;
                 }
                 @include forClientSection {
-                    text-align: center
+                    width: 100%;
+                    padding: 20px 0;
+                    text-align: center;
                 }
                 &__nums {
                     display: flex;
+                    @include forClientSection {
+                        @include flexbox(center,
+                        center);
+                    }
                     &__text {
                         padding: 0 0 8px;
                         font-weight: bold;
                         font-size: 48px;
                         line-height: 1;
-                        color: #FF931E;
+                        color: #ff931e;
                     }
                     &__head {
                         padding: 0 0 8px;
                         font-weight: bold;
                         font-size: 48px;
                         line-height: 1;
-                        color: #FF931E;
+                        color: #ff931e;
                         margin-right: 10px;
                         @include forClientSectionTablet {
                             font-size: 32px;
@@ -606,37 +724,342 @@
 }
 
 .map {
-    &__container {
+    padding: 0px 0 60px;
+    position: relative;
+    @include forClientSectionComp {
+        padding: 0px;
+        display: none;
+    }
+    @include forClientSectionTablet {
+        padding: 30px 0;
+        display: none;
+    }
+    @include forClientSection {
+        padding: 30px 0;
+        display: none;
+    }
+    &__wrapper {
+        @include allContainer();
         max-width: 1280px;
-        padding: 0 20px;
-        margin: 0 auto;
         position: relative;
         overflow: hidden;
-        // &__svg {
-        //     // width: 1168px;
-        //     // height: 770px;
-        // }
-        &__head {
+        &__container {
+            margin: -120px 0 0;
+            position: relative;
+            @include forClientSectionTablet {
+                padding: 60px 0 20px;
+            }
+            @include forClientSection {
+                padding: 80px 0 120px;
+            }
+            &__svg-con {
+                cursor: pointer;
+                &__svg {
+                    user-select: none;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    transform-origin: 0px 0px;
+                    max-width: none !important;
+                    max-height: none !important;
+                    transition: transform 0.4s ease 0s, -webkit-transform 0.4s ease 0s;
+                    cursor: pointer;
+                }
+            }
+            &__flags {
+                display: none;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: stretch;
+                align-items: center;
+                height: 35px;
+                padding: 0 10px;
+                background: #fff;
+                border-radius: 8px 8px 8px 0;
+                position: absolute;
+                &__img {
+                    width: 24px;
+                }
+                &__text {
+                    display: inline-block;
+                    padding: 0 0 0 6px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 1;
+                    letter-spacing: 0.01em;
+                    text-transform: capitalize;
+                    color: #222;
+                }
+            }
+            &__flags::before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 0 0;
+                border-color: #fff transparent transparent transparent;
+                position: absolute;
+                left: 0;
+                top: 100%;
+            }
+        }
+        &__container::before {
+            content: "";
+            display: block;
             width: 100%;
-            height: 0;
-            padding: 0px 20px 0px;
+            height: 140px;
+            background: #fff;
             position: absolute;
-            left: 0px;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            @include forClientSectionComp {
+                display: none;
+            }
+            @include forClientSectionTablet {
+                display: none;
+            }
+            @include forClientSection {
+                display: none;
+            }
+        }
+        &__text-container {
+            position: absolute;
+            width: 100%;
             top: 80px;
-            &__geo {
+            height: 0;
+            left: 0;
+            padding: 0px 20px;
+            @include forClientSectionComp {
+                top: 40px;
+            }
+            @include forClientSectionTablet {
+                top: 30px;
+            }
+            @include forClientSection {
+                top: 80px;
+            }
+            &__main-text {
                 height: 0;
                 font-weight: bold;
                 font-size: 36px;
-                line-height: 1.30;
-                color: #2D3192;
+                line-height: 1.29;
+                letter-spacing: 0.01em;
+                color: #2d3192;
+                @include forClientSectionComp {
+                    font-size: 32px;
+                }
+                @include forClientSectionTablet {
+                    font-size: 27px;
+                }
+                @include forClientSection {
+                    font-size: 24px;
+                }
             }
         }
         &__info {
             @include flexbox(center,
             flex-start);
-            // &__operation {
-            //     // &__circle {}
-            // }
+            align-content: stretch;
+            width: 100%;
+            height: 0;
+            padding: 0 20px;
+            position: absolute;
+            left: 0;
+            bottom: 160px;
+            @include forClientSectionComp {
+                bottom: 80px;
+            }
+            @include forClientSectionTablet {
+                bottom: 20px;
+            }
+            @include forClientSection {
+                bottom: 160px;
+            }
+            &__container {
+                display: block;
+                padding: 27px;
+                border: 1px solid #d3d8e7;
+                border-radius: 4px;
+                &__operators {
+                    margin: 0 0 16px;
+                    padding: 0 0 0 30px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    text-transform: capitalize;
+                    color: #222;
+                    position: relative;
+                    &--orange::before {
+                        background: #ff931e;
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 10px);
+                        opacity: 0.3;
+                    }
+                    &--orange::after {
+                        background: #ff931e;
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 7px;
+                        top: calc(50% - 3px);
+                    }
+                    &--blue::before {
+                        background: #2d3192;
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 10px);
+                        opacity: 0.3;
+                    }
+                    &--blue::after {
+                        background: #2d3192;
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 7px;
+                        top: calc(50% - 3px);
+                    }
+                    &--both {
+                        margin: 0;
+                    }
+                    &--both::before {
+                        opacity: 1;
+                        background: url(https://www.simbrella.com/site/templates/img/both_icon.svg) no-repeat 50%;
+                        background-size: 24px;
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% - 10px);
+                    }
+                    &--both::after {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 7px;
+                        top: calc(50% - 3px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map-forPhone {
+    display: none;
+    padding: 30 0 60px;
+    position: relative;
+    @include forClientSectionComp {
+        display: block;
+        padding: 0;
+    }
+    @include forClientSectionTablet {
+        display: block;
+        padding: 30px 0;
+    }
+    @include forClientSection {
+        display: block;
+        padding: 30px 0;
+    }
+    &__wrapper {
+        @include allContainer();
+        max-width: 1280px;
+        position: relative;
+        &__main-text {
+            padding: 0 0 30px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #2d3192;
+            text-align: center;
+            @include forClientSectionComp {
+                font-size: 32px;
+            }
+            @include forClientSectionTablet {
+                font-size: 27px;
+            }
+            @include forClientSection {
+                font-size: 24px;
+            }
+        }
+        &__map-cont {
+            display: none;
+            padding-bottom: 20px;
+            @include forClientSectionComp {
+                display: block;
+            }
+            @include forClientSectionTablet {
+                display: block;
+            }
+            @include forClientSection {
+                display: block;
+            }
+            &__img {
+                display: block;
+                width: 100%;
+            }
+        }
+        &__text-sec {
+            padding: 0 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #2d3192;
+        }
+        &__infos {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 15px 20px;
+            padding-bottom: 40px;
+            grid-auto-rows: minmax(min-content, max-content);
+            @include forClientSectionComp {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include forClientSectionTablet {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @include forClientSection {
+                grid-template-columns: 1fr 1fr;
+            }
+            &__container {
+                @include flexbox(center,
+                flex-start);
+                align-content: stretch;
+                flex-wrap: nowrap;
+                height: auto;
+                &__country-name {
+                    font-size: 16px;
+                    color: #333;
+                    font-weight: 600;
+                    @include forClientSection {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
 }
@@ -645,7 +1068,7 @@
 .client {
     min-height: calc(100vh - 80px);
     padding: 35px 0 60px;
-    background: #F6F8FE;
+    background: #f6f8fe;
     &__container {
         max-width: 1140px;
         margin: 0 auto;
@@ -654,8 +1077,8 @@
             padding: 0 0 30px;
             font-weight: bold;
             font-size: 36px;
-            line-height: 1.30;
-            color: #2D3192;
+            line-height: 1.3;
+            color: #2d3192;
         }
         &__grid {
             display: grid;
@@ -691,7 +1114,7 @@
                 align-items: center;
                 height: 160px;
                 margin: 0;
-                border: 1px solid #D5DDE4;
+                border: 1px solid #d5dde4;
                 background: #fff;
                 position: relative;
                 border-radius: 4px;
@@ -712,12 +1135,95 @@
     }
 }
 
-//executive-team start 
+//executive-team start
 .team {
     transition: 1s;
-    @include forTeam {
+    // @include forTeam {
+    //     display: none;
+    //     transition: 1s;
+    // }
+    &__close {
         display: none;
-        transition: 1s;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        @include forClientSectionComp {
+            display: block;
+        }
+        @include forClientSectionTablet {
+            display: block;
+        }
+        @include forClientSection {
+            display: block;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #2d3192;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1px);
+            transform: rotate(45deg);
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #2d3192;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1px);
+            transform: rotate(-45deg);
+        }
+    }
+    @include forClientSectionComp {
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        height: calc(100vh - 0px);
+        padding: 25px 0 60px;
+        z-index: 10;
+        animation-duration: 0.3s;
+        transition: all 0.3s linear;
+    }
+    @include forClientSectionTablet {
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        height: calc(100vh - 0px);
+        padding: 25px 0 60px;
+        z-index: 10;
+        animation-duration: 0.3s;
+        transition: all 0.3s linear;
+    }
+    @include forClientSection {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #fff;
+        padding: 25px 0 60px;
+        z-index: 10;
+        animation-duration: 0.3s;
+        transition: all 0.3s linear;
     }
     min-height: calc(100vh - 80px);
     padding: 35px 0 60px;
@@ -729,46 +1235,133 @@
             padding: 0 0 30px;
             font-weight: bold;
             font-size: 36px;
-            line-height: 1.30;
-            color: #2D3192;
+            line-height: 1.3;
+            color: #2d3192;
+            @include forClientSectionComp {}
+            @include forClientSectionTablet {}
+            @include forClientSection {
+                padding: 0 0 20px;
+                font-size: 24px;
+            }
         }
-        &__collective {
-            font-size: 0;
-            text-align: center;
-            width: calc(100% + 30px);
-            margin: 0 0 0 -15px;
-            &__officer {
-                width: calc(20% - 30px);
-                margin: 0 15px 48px;
-                display: inline-block;
-                vertical-align: top;
-                &__bg {
-                    background: url("https://www.simbrella.com/site/templates/img/figure_green_bg.png");
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    height: 270px;
-                    border-radius: 4px;
-                    display: flex;
-                    justify-content: center;
-                    &__img {
+        &__wrapper {
+            @include forClientSectionComp {
+                width: calc(100% + 20px);
+                margin: 0 0 0 -10px;
+            }
+            @include forClientSectionTablet {
+                width: calc(100% + 20px);
+                margin: 0 0 0 -10px;
+            }
+            @include forClientSection {
+                width: 100%;
+                margin: 0;
+            }
+            &__collective {
+                font-size: 0;
+                text-align: center;
+                width: calc(100% + 30px);
+                margin: 0 0 0 -15px;
+                @include forClientSectionComp {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-gap: 48px 20px;
+                    width: 100%;
+                    height: calc(100vh - 120px);
+                    padding: 0 20px;
+                    overflow-y: auto;
+                    position: fixed;
+                    left: 0;
+                }
+                @include forClientSectionTablet {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 48px 20px;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    padding: 0 20px;
+                    overflow-y: auto;
+                    position: fixed;
+                    left: 0;
+                }
+                @include forClientSection {
+                    //   width: 95%;
+                    height: calc(100vh - 80px);
+                    padding: 0 60px;
+                    overflow-y: auto;
+                    grid-template-columns: 1fr;
+                    grid-gap: 32px 20px;
+                    position: fixed;
+                    left: 0;
+                    top: 75px;
+                }
+                &__officer {
+                    width: calc(20% - 30px);
+                    margin: 0 15px 48px;
+                    display: inline-block;
+                    vertical-align: top;
+                    @include forClientSectionComp {
+                        width: calc(25% - 20px);
+                        margin: 0 10px 48px;
+                    }
+                    @include forClientSectionTablet {
+                        width: calc(50% - 20px);
+                        margin: 0 10px 48px;
+                    }
+                    @include forClientSection {
                         width: 100%;
-                        object-fit: cover;
+                        margin: 0 0 48px;
+                    }
+                    &__bg {
+                        background: url("https://www.simbrella.com/site/templates/img/figure_green_bg.png");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 270px;
+                        border-radius: 4px;
+                        display: flex;
+                        justify-content: center;
+                        background-position: 0px 50%;
+                        @include forClientSectionComp {
+                            height: 30vw;
+                        }
+                        @include forClientSectionTablet {
+                            height: 60vw;
+                        }
+                        @include forClientSection {
+                            height: 100vw;
+                        }
+                        &__img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &__bottom {
+                        padding: 16px 0px;
+                        @include forClientSection {
+                            padding: 10px 0 0;
+                        }
+                        &__head {
+                            padding: 0 0 4px;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 1.33;
+                            color: #222;
+                        }
+                        &__par {
+                            font-size: 15px;
+                            line-height: 1.6;
+                            color: #5f6773;
+                            letter-spacing: -0.02em;
+                        }
                     }
                 }
-                &__bottom {
-                    padding: 16px 0px;
-                    &__head {
-                        padding: 0 0 4px;
-                        font-weight: 600;
-                        font-size: 18px;
-                        line-height: 1.33;
-                        color: #222;
+                &__br {
+                    @include forClientSectionTablet {
+                        display: none;
                     }
-                    &__par {
-                        font-size: 15px;
-                        line-height: 1.6;
-                        color: #5F6773;
-                        letter-spacing: -0.02em;
+                    @include forClientSection {
+                        display: none;
+                    }
+                    @include forClientSectionComp {
+                        display: none;
                     }
                 }
             }
@@ -776,8 +1369,13 @@
     }
 }
 
+.show-team {
+    opacity: 1;
+    visibility: visible;
+}
+
 .job {
-    background: #F6F8FE;
+    background: #f6f8fe;
     padding: 35px 0 60px 0;
     @include forClientSectionComp2 {}
     &__container {
@@ -789,8 +1387,8 @@
                 padding: 0 0 30px;
                 font-weight: bold;
                 font-size: 36px;
-                line-height: 1.30;
-                color: #2D3192;
+                line-height: 1.3;
+                color: #2d3192;
             }
             &__three {
                 @include flexbox(center,
@@ -865,7 +1463,7 @@
                 color: #fff;
                 border-radius: 4px;
                 position: relative;
-                background: #2D3192;
+                background: #2d3192;
                 // @include flexbox(center);
                 @include forClientSectionComp {
                     padding: 30px;
@@ -919,7 +1517,7 @@
                         background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
                     }
                     &__link:hover {
-                        border: 3.5px solid #FF931E;
+                        border: 3.5px solid #ff931e;
                         transition: 0.4s;
                         background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
                         background-repeat: no-repeat;
@@ -947,11 +1545,14 @@
             space-between);
             align-content: stretch;
             padding: 0 0 40px;
+            @include forClientSection {
+                flex-wrap: wrap;
+            }
             &__head {
                 font-weight: bold;
                 font-size: 36px;
                 line-height: 1.3;
-                color: #2D3192;
+                color: #2d3192;
                 @include forClientSection {
                     font-size: 24px;
                 }
@@ -971,12 +1572,9 @@
                     text-align: center;
                     transition: 0.4s;
                     background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") no-repeat calc(100% - 24px) 50%;
-                    @include forClientSection {
-                        padding: 0 70px 0 24px;
-                    }
                 }
                 &__link:hover {
-                    border: 3.5px solid #FF931E;
+                    border: 3.5px solid #ff931e;
                     transition: 0.4s;
                     background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 19px) 50%;
                     background-repeat: no-repeat;
@@ -1043,7 +1641,7 @@
                 &__date {
                     font-size: 18px;
                     line-height: 1.33;
-                    color: #5F6773;
+                    color: #5f6773;
                     @include forClientSection {
                         font-size: 14px;
                     }
@@ -1068,8 +1666,8 @@
 }
 
 .white {
-    background-color: #F6F8FE;
-    color: #3595EE;
+    background-color: #f6f8fe;
+    color: #3595ee;
     transform: scale(1.05);
     transition: 0.2s;
 }
@@ -1087,4 +1685,8 @@
 
 .opaa {
     display: none;
+}
+
+.show-country {
+    display: flex;
 }

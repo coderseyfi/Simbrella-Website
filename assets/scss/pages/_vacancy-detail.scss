@@ -1,19 +1,34 @@
 .news-sc {
     background-image: url("https://www.simbrella.com/site/templates/img/vacancies_header_bg.svg");
     background-position: 0 50%;
-    background-color: #0C0D26;
+    background-color: #0c0d26;
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
     padding: 0 0 70px;
     @include flexbox(flex-end);
+    @include forClientSectionTablet {
+        height: 270px !important;
+        padding: 0 0 20px;
+    }
+    @include forClientSection {
+        height: auto !important;
+        padding: 120px 0 20px !important;
+    }
     &__cap {
         color: white;
         @include allContainer();
         width: 100%;
         &__word {
+            @include forClientSection {
+                font-size: 24px !important;
+                padding: 0 0 20px;
+            }
+            @include forClientSectionTablet {
+                font-size: 27px !important;
+            }
             font-weight: bold;
-            font-size: 36px;
+            font-size: 32px;
             line-height: 1.29;
             letter-spacing: 0.01em;
             color: #fff;
@@ -23,13 +38,13 @@
 
 .skills {
     padding: 60px 0 90px;
-    background: #F6F8FE;
+    background: #f6f8fe;
     &__container {
         @include allContainer();
         &__wrapper {
             padding: 0 0 30px;
             margin: 0 0 60px;
-            border-bottom: 1px solid #E7E7E7;
+            border-bottom: 1px solid #e7e7e7;
             &__cap {
                 width: 100%;
                 padding: 0 0 18px;
@@ -52,7 +67,7 @@
                         display: block;
                         width: 8px;
                         height: 8px;
-                        background: #FF931E;
+                        background: #ff931e;
                         position: absolute;
                         left: 0;
                         top: calc(50% - 4px);
@@ -66,7 +81,7 @@
 
 .apply {
     padding: 120px 0;
-    background: #2D3192;
+    background: #2d3192;
     @include forClientSectionComp {
         padding: 40px 0;
     }
@@ -226,6 +241,15 @@
                         }
                     }
                     &__button {
+                        @include forClientSection {
+                            width: 100% !important;
+                        }
+                        @include forClientSectionTablet {
+                            width: 50% !important;
+                        }
+                        @include forClientSectionComp {
+                            width: 50% !important;
+                        }
                         &__link {
                             display: inline-block;
                             height: 64px;
@@ -248,7 +272,7 @@
                             center);
                         }
                         &__link:hover {
-                            border: 3.5px solid #FF931E;
+                            border: 3.5px solid #ff931e;
                             transition: 0.4s;
                             background: url("https://www.simbrella.com/site/templates/img/link_orange_icon.svg") calc(100% - 20px) 50%;
                             background-repeat: no-repeat;
@@ -304,5 +328,5 @@
 }
 
 .border {
-    border-color: red;
+    border-color: red !important;
 }

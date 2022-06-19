@@ -1,285 +1,360 @@
-.story {
+.our-story {
     padding: 90px 0;
-    background-color: #F6F8FE;
+    background-color: #f6f8fe;
     overflow: hidden;
-    @include forClientSection {
-        padding: 30px 0;
+    @include forClientSectionComp {
+        padding: 40px 0;
     }
     @include forClientSectionTablet {
         padding: 40px 0;
     }
-    &__container {
-        @include flexbox(stretch, space-between);
-        align-content: stretch;
+    @include forClientSection {
+        padding: 30px 0;
+    }
+    &__wrapper {
         @include allContainer();
-        @include forClientSection {
+        @include flexbox(stretch, space-between);
+        @include forClientSectionComp {
             display: block;
         }
         @include forClientSectionTablet {
             display: block;
         }
-        &__left {
+        @include forClientSection {
+            display: block;
+        }
+        &__l {
             width: calc(50% - 15px);
-            @include forClientSection {
+            @include forClientSectionComp {
                 width: 100%;
             }
             @include forClientSectionTablet {
                 width: 100%;
             }
-            &__inner {
+            @include forClientSection {
+                width: 100%;
+            }
+            &__up {
                 min-height: 626px;
-                @include forClientSection {
+                @include forClientSectionComp {
                     min-height: 1px;
                 }
                 @include forClientSectionTablet {
                     min-height: 1px;
                 }
-                &__text {
+                @include forClientSection {
+                    min-height: 1px;
+                }
+                &__container {
                     font-size: 18px;
                     line-height: 1.56;
                     color: #222;
-                    @include forClientSection {
-                        font-size: 16px;
-                    }
                     @include forClientSectionTablet {
                         font-size: 16px;
                     }
-                    &__cap {
+                    @include forClientSection {
+                        font-size: 16px;
+                    }
+                    &__main-text {
                         padding: 0 0 24px;
                         font-weight: bold;
                         font-size: 56px;
                         line-height: 1.29;
-                        color: #2D3192;
-                        @include forClientSectionTablet {
+                        letter-spacing: 0.01em;
+                        color: #2d3192;
+                        @include forClientSectionComp {
                             padding: 0 0 16px;
+                            font-size: 36px;
+                        }
+                        @include forClientSectionTablet {
                             font-size: 32px;
+                            padding: 0 0 16px;
+                        }
+                        @include forClientSection {
+                            font-size: 27px;
+                            padding: 0 0 16px;
                         }
                     }
-                    &__par {
-                        padding: 0 0 24px;
-                        @include forClientSection {
-                            padding: 0 0 16px;
-                        }
+                    &__paragraph {
+                        padding-bottom: 24px;
                         @include forClientSectionTablet {
-                            padding: 0 0 16px;
+                            padding-bottom: 16px;
+                        }
+                        @include forClientSection {
+                            padding-bottom: 16px;
                         }
                     }
                 }
             }
-            &__year {
+            &__down {
                 width: 100%;
                 height: 700px;
                 text-align: center;
                 position: relative;
-                @include forClientSection {
-                    height: 80vw;
+                @include forClientSectionComp {
+                    height: 500px;
                 }
                 @include forClientSectionTablet {
                     height: 80vw;
                 }
-                &::before {
-                    left: calc(50% - 0px);
-                    top: 36px;
-                    transform: rotate(180deg);
+                @include forClientSection {
+                    height: 80vw;
                 }
-                &::after {
-                    content: "";
-                    display: block;
-                    width: calc(100% - 170px);
-                    height: 2px;
-                    background-color: #2D3192;
-                    position: absolute;
-                    left: calc(50% + 100px);
-                    top: 36px;
-                }
-                &__em {
+                &__round-right {
                     display: inline-block;
                     width: 424px;
                     height: 424px;
-                    border: 2px solid #2D3192;
+                    border: 2px solid #2d3192;
                     position: absolute;
                     left: calc(50% - 212px);
                     top: calc(50% - 212px);
                     border-radius: 50%;
-                    @include forClientSection {
-                        width: 60vw;
-                        height: 60vw;
-                        left: calc(50% - 30vw);
-                        top: calc(50% - 30vw);
-                    }
                     @include forClientSectionTablet {
                         width: 60vw;
                         height: 60vw;
                         left: calc(50% - 30vw);
                         top: calc(50% - 30vw);
                     }
-                    &::before {
-                        content: "";
-                        display: block;
-                        width: calc(100% - 50px);
-                        height: calc(100% - 50px);
-                        background-color: #fff;
-                        position: absolute;
-                        left: 25px;
-                        top: 25px;
-                        border-radius: 50%;
+                    @include forClientSection {
+                        width: 60vw;
+                        height: 60vw;
+                        left: calc(50% - 30vw);
+                        top: calc(50% - 30vw);
                     }
                 }
-                &__strong {
+                &__round::before {
+                    content: "";
+                    display: block;
+                    width: calc(100% - 50px);
+                    height: calc(100% - 50px);
+                    background-color: #fff;
+                    position: absolute;
+                    left: 25px;
+                    top: 25px;
+                    border-radius: 50%;
+                }
+                &__round-left {
                     display: inline-block;
                     width: 424px;
                     height: 424px;
-                    border: 2px solid #2D3192;
+                    border: 2px solid #2d3192;
                     position: absolute;
                     left: auto;
                     right: calc(100% + 60px);
                     top: calc(50% - 212px);
                     border-radius: 50%;
                 }
-                &__date {
+                &__year {
                     font-weight: bold;
                     font-size: 210px;
                     line-height: 700px;
                     text-align: center;
                     letter-spacing: 0.01em;
-                    color: #FF931E;
+                    color: #ff931e;
                     position: relative;
-                    @include forClientSection {
-                        line-height: 80vw;
-                        font-size: 30vw;
+                    @include forClientSectionComp {
+                        line-height: 500px;
                     }
                     @include forClientSectionTablet {
                         line-height: 80vw;
                         font-size: 30vw;
                     }
+                    @include forClientSection {
+                        line-height: 80vw;
+                        font-size: 30vw;
+                    }
                 }
             }
-        }
-        &__right {
-            width: calc(50% - 15px);
-            @include forClientSection {
-                width: 100%;
-            }
-            @include forClientSectionTablet {
-                width: 100%;
-            }
-            &::before {
+            &__down::before {
                 content: "";
+                transform: rotate(180deg);
                 display: block;
                 width: 100px;
                 height: 100px;
                 position: absolute;
-                left: calc(32%);
-                bottom: -55%;
+                left: calc(50% - 100px);
+                bottom: 36px;
                 border: none;
-                border-right: 2px solid #2D3192;
-                border-bottom: 2px solid #2D3192;
+                border-right: 2px solid #2d3192;
+                border-bottom: 2px solid #2d3192;
                 border-radius: 0 0 100% 0;
-                transform: rotate(180deg);
+                left: calc(50% - 0px);
+                top: 36px;
+                @include forClientSectionComp {
+                    display: none;
+                }
+                @include forClientSectionTablet {
+                    display: none;
+                }
+                @include forClientSection {
+                    display: none;
+                }
             }
-            &__year {
+            &__down::after {
+                content: "";
+                display: block;
+                width: calc(100% - 170px);
+                height: 2px;
+                background-color: #2d3192;
+                position: absolute;
+                left: calc(50% + 100px);
+                top: 36px;
+                @include forClientSectionComp {
+                    display: none;
+                }
+                @include forClientSectionTablet {
+                    display: none;
+                }
+                @include forClientSection {
+                    display: none;
+                }
+            }
+        }
+        &__r {
+            width: calc(50% - 15px);
+            @include forClientSectionComp {
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            @include forClientSectionTablet {
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            @include forClientSection {
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            &__up {
                 width: 100%;
                 height: 700px;
                 text-align: center;
                 position: relative;
-                @include forClientSection {
-                    height: 80vw;
+                @include forClientSectionComp {
+                    height: 500px;
                 }
                 @include forClientSectionTablet {
                     height: 80vw;
                 }
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 100px;
-                    height: 100px;
-                    position: absolute;
-                    left: calc(50% - 100px);
-                    bottom: 36px;
-                    border: none;
-                    border-right: 2px solid #2D3192;
-                    border-bottom: 2px solid #2D3192;
-                    border-radius: 0 0 100% 0;
+                @include forClientSection {
+                    height: 80vw;
                 }
-                &__em {
+                &__round-left {
                     display: inline-block;
                     width: 424px;
                     height: 424px;
-                    border: 2px solid #2D3192;
+                    border: 2px solid #2d3192;
                     position: absolute;
                     left: calc(50% - 212px);
                     top: calc(50% - 212px);
                     border-radius: 50%;
-                    @include forClientSection {
-                        width: 60vw;
-                        height: 60vw;
-                        left: calc(50% - 30vw);
-                        top: calc(50% - 30vw);
-                    }
                     @include forClientSectionTablet {
                         width: 60vw;
                         height: 60vw;
                         left: calc(50% - 30vw);
                         top: calc(50% - 30vw);
                     }
-                    &::before {
-                        content: "";
-                        display: block;
-                        width: calc(100% - 50px);
-                        height: calc(100% - 50px);
-                        background-color: #fff;
-                        position: absolute;
-                        left: 25px;
-                        top: 25px;
-                        border-radius: 50%;
+                    @include forClientSection {
+                        width: 60vw;
+                        height: 60vw;
+                        left: calc(50% - 30vw);
+                        top: calc(50% - 30vw);
                     }
                 }
-                &__strong {
+                &__round-left::before {
+                    content: "";
+                    display: block;
+                    width: calc(100% - 50px);
+                    height: calc(100% - 50px);
+                    background-color: #fff;
+                    position: absolute;
+                    left: 25px;
+                    top: 25px;
+                    border-radius: 50%;
+                }
+                &__round-right {
                     display: inline-block;
                     width: 424px;
                     height: 424px;
-                    border: 2px solid #2D3192;
+                    border: 2px solid #2d3192;
                     position: absolute;
                     left: calc(100% + 60px);
                     top: calc(50% - 212px);
                     border-radius: 50%;
                 }
-                &__date {
+                &__year {
                     font-weight: bold;
                     font-size: 210px;
                     line-height: 700px;
                     text-align: center;
-                    color: #FF931E;
+                    letter-spacing: 0.01em;
+                    color: #ff931e;
                     position: relative;
-                    @include forClientSection {
-                        line-height: 80vw;
-                        font-size: 30vw;
+                    @include forClientSectionComp {
+                        line-height: 500px;
                     }
                     @include forClientSectionTablet {
                         line-height: 80vw;
                         font-size: 30vw;
                     }
+                    @include forClientSection {
+                        line-height: 80vw;
+                        font-size: 30vw;
+                    }
                 }
             }
-            &__inner {
-                min-height: 626px;
+            &__up::before {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: calc(50% - 100px);
+                bottom: 36px;
+                border: none;
+                border-right: 2px solid #2d3192;
+                border-bottom: 2px solid #2d3192;
+                border-radius: 0 0 100% 0;
+                @include forClientSectionComp {
+                    display: none;
+                }
+                @include forClientSectionTablet {
+                    display: none;
+                }
                 @include forClientSection {
+                    display: none;
+                }
+            }
+            &__down {
+                min-height: 626px;
+                @include forClientSectionComp {
                     min-height: 1px;
                 }
                 @include forClientSectionTablet {
                     min-height: 1px;
                 }
-                &__text {
+                @include forClientSection {
+                    min-height: 1px;
+                }
+                &__container {
                     font-size: 18px;
                     line-height: 1.56;
                     color: #222;
                     @include forClientSectionTablet {
                         font-size: 16px;
                     }
-                    &__par {
+                    @include forClientSection {
+                        font-size: 16px;
+                    }
+                    &__paragraph {
                         padding: 0 0 24px;
                         @include forClientSectionTablet {
-                            padding: 0 0 16px;
+                            padding-bottom: 16px;
+                        }
+                        @include forClientSection {
+                            padding-bottom: 16px;
                         }
                     }
                 }
@@ -290,7 +365,7 @@
 
 .conformity {
     padding: 90px 0;
-    background-color: #F6F8FE;
+    background-color: #f6f8fe;
     overflow: hidden;
     @include forClientSection {
         padding: 30px 0;
@@ -308,6 +383,9 @@
         @include forClientSectionTablet {
             display: block;
         }
+        @include forClientSectionComp {
+            display: block;
+        }
         &__left {
             width: calc(50% - 15px);
             @include forClientSection {
@@ -315,6 +393,10 @@
                 padding: 0 0 24px;
             }
             @include forClientSectionTablet {
+                width: 100%;
+                padding: 0 0 24px;
+            }
+            @include forClientSectionComp {
                 width: 100%;
                 padding: 0 0 24px;
             }
@@ -366,7 +448,7 @@
                             display: block;
                             width: 8px;
                             height: 8px;
-                            background-color: #FF931E;
+                            background-color: #ff931e;
                             position: absolute;
                             left: 0;
                             top: 10px;
@@ -387,28 +469,32 @@
             @include forClientSectionTablet {
                 width: 100%;
             }
+            @include forClientSectionComp {
+                width: 100%;
+            }
             &__form {
                 padding: 48px;
-                border: 2px solid #2D3192;
+                border: 2px solid #2d3192;
                 background-color: #fff;
                 border-radius: 24px;
                 box-shadow: 0 2px 0 0 #2d3192;
                 @include forClientSection {
-                    padding: 24px
+                    padding: 24px;
                 }
                 @include forClientSectionTablet {
                     padding: 24px;
                 }
                 &__vacancy {
+                    display: block;
                     &__hidden {
                         display: block;
                         width: 100%;
                         height: 56px;
                         padding: 0 20px;
-                        border: 1px solid #DDDEE1;
+                        border: 1px solid #dddee1;
                         font-size: 16px;
                         color: #000;
-                        font-family: 'fooont';
+                        font-family: "fooont";
                         border-radius: 12px;
                     }
                     &__head {
@@ -436,7 +522,7 @@
                             height: 56px;
                             padding: 0 20px;
                             margin-right: 15px;
-                            border: 1px solid #DDDEE1;
+                            border: 1px solid #dddee1;
                             font-size: 16px;
                             color: #000;
                             border-radius: 12px;
@@ -457,7 +543,7 @@
                             width: 100%;
                             height: 56px;
                             padding: 0 20px;
-                            border: 1px solid #DDDEE1;
+                            border: 1px solid #dddee1;
                             font-size: 16px;
                             color: #000;
                             border-radius: 12px;
@@ -467,7 +553,7 @@
                             width: 100%;
                             height: 140px;
                             padding: 16px 20px;
-                            border: 1px solid #DDDEE1;
+                            border: 1px solid #dddee1;
                             font-size: 16px;
                             color: #000;
                             border-radius: 12px;
@@ -476,28 +562,50 @@
                     }
                     &__button {
                         text-align: right;
-                        button {
-                            @include forClientSection {
-                                width: 100%;
+                        &__send {
+                            &__link {
+                                @include forClientSection {
+                                    width: 100%;
+                                }
+                                display: inline-block;
+                                width: calc(50% - 15px);
+                                height: 64px;
+                                padding: 0 48px 0 24px;
+                                border: none;
+                                font-weight: 600;
+                                font-size: 15px;
+                                line-height: 64px;
+                                color: #fff;
+                                text-align: left;
+                                text-decoration: none;
+                                background-color: #ff931e;
+                                background-repeat: no-repeat;
+                                background-position: calc(100% - 24px) 50%;
+                                background-image: url("https://www.simbrella.com/site/templates/img/link_white_arrow.svg");
+                                border-radius: 12px;
+                                cursor: pointer;
                             }
-                            display: inline-block;
-                            width: calc(50% - 15px);
-                            height: 64px;
-                            padding: 0 48px 0 24px;
-                            border: none;
-                            font-weight: 600;
-                            font-size: 15px;
-                            line-height: 64px;
-                            color: #fff;
-                            text-align: left;
-                            text-decoration: none;
-                            background-color: #FF931E;
-                            background-repeat: no-repeat;
-                            background-position: calc(100% - 24px) 50%;
-                            background-image: url("https://www.simbrella.com/site/templates/img/link_white_arrow.svg");
-                            border-radius: 12px;
-                            cursor: pointer;
                         }
+                    }
+                }
+                &__success {
+                    display: none;
+                    &__cap {
+                        text-align: center;
+                        padding: 0 0 40px;
+                        font-weight: 600;
+                        font-size: 48px;
+                        line-height: 1.33;
+                        letter-spacing: 0.01em;
+                        color: #222;
+                    }
+                    &__sentence {
+                        text-align: center;
+                        padding: 0 0 32px;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 1.56;
+                        color: #222;
                     }
                 }
             }
